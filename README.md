@@ -1,520 +1,554 @@
-# Awesome Django [![Awesome](https://awesome.re/badge-flat.svg)](https://github.com/sindresorhus/awesome)
-
-<a class="github-fork-ribbon right-top" href="https://github.com/wsvincent/awesome-django" data-ribbon="Fork me on GitHub" title="Fork me on GitHub">Fork me on GitHub</a>
-
-> A curated list of awesome things related to Django. Maintained by [William Vincent](https://github.com/wsvincent) and [Jeff Triplett](https://github.com/jefftriplett).
-
+<div class="Box-sc-g0xbh4-0 bJMeLZ js-snippet-clipboard-copy-unpositioned" data-hpc="true"><article class="markdown-body entry-content container-lg" itemprop="text"><h1 tabindex="-1" dir="auto"><a id="user-content-awesome-django-" class="anchor" aria-hidden="true" tabindex="-1" href="#awesome-django-"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">很棒的Django</font></font><a href="https://github.com/sindresorhus/awesome"><img src="https://camo.githubusercontent.com/d8a7a4fac2f2d3bf4b2c51bcfd52e313ba9f174d739073645c5b7efbce171fd4/68747470733a2f2f617765736f6d652e72652f62616467652d666c61742e737667" alt="惊人的" data-canonical-src="https://awesome.re/badge-flat.svg" style="max-width: 100%;"></a></h1>
+<p dir="auto"><a href="https://github.com/wsvincent/awesome-django" title="在 GitHub 上分叉我"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">在 GitHub 上分叉我</font></font></a></p>
+<blockquote>
+<p dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">与 Django 相关的精彩内容的精选列表。</font></font><a href="https://github.com/wsvincent"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">由William Vincent</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">和</font></font><a href="https://github.com/jefftriplett"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Jeff Triplett</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">维护</font><font style="vertical-align: inherit;">。</font></font></p>
+</blockquote>
 <br>
-
-<div align="center">
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="./assets/django-logo-negative.svg">
-  <img alt="Dark and Light mode version of the Django logo" src="./assets/django-logo-positive.svg">
-</picture>
+<div align="center" dir="auto">
+<themed-picture data-catalyst-inline="true" data-catalyst=""><picture>
+  <source media="(prefers-color-scheme: dark)" srcset="/wsvincent/awesome-django/raw/main/assets/django-logo-negative.svg">
+  <img alt="Django 徽标的深色和浅色模式版本" src="/wsvincent/awesome-django/raw/main/assets/django-logo-positive.svg" style="visibility:visible;max-width:100%;">
+</picture></themed-picture>
 </div>
-
 <br>
-
-Please consider supporting Django by making a donation to the <a rel="sponsored" href="https://www.djangoproject.com/fundraising/">Django Software Foundation</a>,
-sponsoring via <a rel="sponsored" href="https://github.com/sponsors/django">GitHub Sponsors</a>,
-or buying <a rel="sponsored" href="https://django.threadless.com/">official merchandise</a>.
-
-
-## Contents
-
-<!--lint disable awesome-toc-->
-<!-- START doctoc generated TOC please keep comment here to allow auto update -->
-<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
-
-- [Third-Party Packages](#third-party-packages)
-  - [Admin](#admin)
-  - [APIs](#apis)
-  - [Async](#async)
-  - [Caching](#caching)
-  - [Commands](#commands)
-  - [Configuration](#configuration)
-  - [Content Management Systems](#content-management-systems)
-  - [Database Connectors](#database-connectors)
-  - [ECommerce](#ecommerce)
-  - [Editors](#editors)
-  - [Files/Images](#filesimages)
-  - [Forms](#forms)
-  - [Full-stack frameworks](#full-stack-frameworks)
-  - [General](#general)
-  - [Logging](#logging)
-  - [Model Fields](#model-fields)
-  - [Models](#models)
-  - [Performance](#performance)
-  - [Search](#search)
-  - [Search Engine Optimisation](#search-engine-optimisation)
-  - [Security](#security)
-  - [Static Assets](#static-assets)
-  - [Task Queues](#task-queues)
-  - [Templates](#templates)
-  - [Testing](#testing)
-  - [URLs](#urls)
-  - [Users](#users)
-  - [Views](#views)
-- [Python Packages](#python-packages)
-- [Resources](#resources)
-  - [Official Resources](#official-resources)
-  - [Educational](#educational)
-  - [Community](#community)
-  - [Conferences](#conferences)
-  - [Job Boards](#job-boards)
-  - [Newsletters](#newsletters)
-  - [Podcasts](#podcasts)
-  - [Books](#books)
-- [Hosting](#hosting)
-  - [PaaS (Platforms-as-a-Service)](#paas-platforms-as-a-service)
-  - [IaaS (Infrastructure-as-a-Service)](#iaas-infrastructure-as-a-service)
-- [Projects](#projects)
-  - [Boilerplate](#boilerplate)
-  - [Open Source Projects](#open-source-projects)
-- [Django REST Framework](#django-rest-framework)
-  - [DRF Resources](#drf-resources)
-  - [DRF Tutorials](#drf-tutorials)
-- [Wagtail](#wagtail)
-  - [Wagtail Resources](#wagtail-resources)
-
-<!-- END doctoc generated TOC please keep comment here to allow auto update -->
-<!--lint enable awesome-toc-->
-
-## Third-Party Packages
-
-_For a complete listing of all available packages, see [Django Packages](https://djangopackages.org/)_
-
-### Admin
-- [django-grappelli](https://github.com/sehmaschine/django-grappelli) - A jazzy skin for the admin.
-- [django-jazzmin](https://github.com/farridav/django-jazzmin) - Drop-in theme for django admin, that utilises AdminLTE 3 & Bootstrap 4 to make yo' admin look jazzy.
-- [django-hijack](https://github.com/arteria/django-hijack) - Admins can log in and work on behalf of other users without having to know their credentials.
-- [django-import-export](https://github.com/django-import-export/django-import-export) - Django application and library for importing and exporting data with admin integration.
-- [django-admin-honeypot](https://github.com/dmpayton/django-admin-honeypot) - Configure a honeypot to see who's trying to hack your site.
-- [django-loginas](https://github.com/skorokithakis/django-loginas) - "Log in as user" for the Django admin.
-- [impostor](https://github.com/avallbona/Impostor) - Impostor is a Django application which allows staff members to login as a different user by using their own username and password.
-- [django-impersonate](https://pypi.org/project/django-impersonate/) - Allow superusers to “impersonate” other non-superuser accounts.
-- [django-admin-env-notice](https://github.com/dizballanze/django-admin-env-notice) - Visually distinguish environments in Django Admin, for example: `development`, `staging`, `production`.
-- [django-admin-interface](https://github.com/fabiocaccamo/django-admin-interface) - Customize Admin by the admin itself(color, header. title,logo) and  popup windows replaced by modals.
-- [django-material-admin](https://github.com/MaistrenkoAnton/django-material-admin) - Material design for django administration.
-- [django-related-admin](https://github.com/PetrDlouhy/django-related-admin) - A helper library that allows you to write list_displays accross foreign key relationships.
-- [django-semantic-admin](https://github.com/globophobe/django-semantic-admin) - Django Semantic UI admin theme.
-- [django-jet-reboot](https://github.com/b1go/django-jet-reboot) - Django Jet is modern template for Django admin interface with improved functionality.
-- [django-baton](https://github.com/otto-torino/django-baton) - A cool, modern and responsive django admin application based on bootstrap 5.
-- [django-admin-sortable2](https://github.com/jrief/django-admin-sortable2) - Generic drag-and-drop ordering for objects in the Django admin interface.
-
-### APIs
-<!--lint disable double-link-->
-- [django-rest-framework](https://github.com/encode/django-rest-framework) - Web APIs for Django.
-- [django-cors-headers](https://github.com/adamchainz/django-cors-headers) - If your back-end and front-end are on different servers, you need this.
-- [dj-rest-auth](https://github.com/jazzband/dj-rest-auth) - Authentication for Django Rest Framework.
-- [django-rest-knox](https://github.com/James1345/django-rest-knox) - Authentication Module for django-rest-auth.
-- [djoser](https://github.com/sunscrapers/djoser) - REST implementation of Django auth.
-- [djaq](https://github.com/paul-wolf/djaq) - An instant remote API to Django models with a powerful query language.
-- [django-rest-framework-simplejwt](https://github.com/davesque/django-rest-framework-simplejwt) - JSON web tokens for DRF.
-- [django-webpack-loader](https://github.com/owais/django-webpack-loader) - Transparently use webpack with Django.
-- [drf-yasg](https://github.com/axnsan12/drf-yasg) - Automated generation of real Swagger/OpenAPI 2.0 schemas from Django REST Framework code.
-- [graphene-django](https://github.com/graphql-python/graphene-django) - GraphQL for Django.
-- [graphene-django-filter](https://github.com/devind-team/graphene-django-filter) - Advanced filters implementing and/or/not operators in GraphQL for Django.
-- [django-ninja](https://django-ninja.rest-framework.com/) - Django Ninja - Fast Django REST framework based on type annotations.
-- [django-tastypie](https://github.com/django-tastypie/django-tastypie) - Creating delicious APIs for Django apps since 2010.
-- [drf-spectacular](https://github.com/tfranzel/drf-spectacular) - Sane and flexible OpenAPI 3 schema generation for Django REST framework.
-<!--lint enable double-link-->
-
-### Async
-- [channels](https://github.com/django/channels/) - Async support for Django.
-- [starlette](https://github.com/encode/starlette) - ASGI framework.
-
-### Caching
-- [django-cachalot](https://github.com/noripyt/django-cachalot) - Caches your Django ORM queries and automatically invalidates them.
-- [django-cacheops](https://github.com/Suor/django-cacheops) - A slick ORM cache with automatic granular event-driven invalidation.
-
-### Commands
-- [django-extensions](https://github.com/django-extensions/django-extensions/) - Custom management extensions, notably `runserver_plus` and `shell_plus`.
-- [django-click](https://github.com/GaretJax/django-click) - Write Django management commands using the click CLI library.
-- [django-dbbackup](https://github.com/django-dbbackup/django-dbbackup) - Management commands to help backup and restore your project database and media files.
-- [django-liquidb](https://github.com/Gusakovskiy/django-liquidb) - Django application to simplify migration management and changes in states of db scheme.
-
-### Configuration
-<!--lint disable double-link-->
-- [confidential](https://github.com/candidco/confidential) - Manage configs and secrets (with CLI support).
-- [django-environ](https://github.com/joke2k/django-environ) - Environment variables.
-- [django-split-settings](https://github.com/sobolevn/django-split-settings) - Organize multiple settings files.
-- [django-constance](https://github.com/jazzband/django-constance) - A Django app for storing dynamic settings in pluggable backends (Redis and Django model backend built in) with an integration with the Django admin app.
-- [django-configurations](https://github.com/jazzband/django-configurations) - eases Django project configuration by relying on the composability of Python classes and following principles of [the twelve-factor app](https://12factor.net/config).
-- [dynaconf](https://www.dynaconf.com/django/) - Dynaconf loads django settings from multiple sources (multiple file formats, env vars, redis, vault, etcd), manages secrets, and allows for different merging strategies all following [the twelve-factor app](https://12factor.net/config).
-- [django-extra-settings](https://github.com/fabiocaccamo/django-extra-settings) - Config and manage typed extra settings using just the django admin.
-- [environs](https://github.com/sloria/environs) - Simplified environment variable parsing that comes with a [Django helper](https://github.com/sloria/environs#usage-with-django) that installs additional packages.
-<!--lint enable double-link-->
-- [django-classy-settings](https://github.com/funkybob/django-classy-settings) - Class based settings to keep your environments in order, with easy access to typed environment variables.
-
-### Content Management Systems
-<!--lint disable double-link-->
-- [wagtail](https://github.com/wagtail/wagtail) - Popular Django content management system (CMS). See [awesome-wagtail](https://github.com/springload/awesome-wagtail) too.
-- [mezzanine](https://github.com/stephenmcd/mezzanine) - CMS framework.
-- [django-cms](https://github.com/divio/django-cms) - CMS for Django.
-- [feincms](https://github.com/feincms/feincms) - An extensible Django-based CMS.
-- [puput](https://github.com/APSL/puput) - Blog app features with Wagtail.
-<!--lint enable double-link-->
-
-### Database Connectors
-- [djongo](https://github.com/doableware/djongo) - Django and MongoDB database connector.
-
-### ECommerce
-- [saleor](https://github.com/mirumee/saleor) - GraphQL-based Django E-Commerce Platform.
-- [django-shop](https://github.com/awesto/django-shop) - Django-based shop system.
-- [shuup](https://github.com/shuup/shuup) - Django E-Commerce Platform.
-- [django-oscar](https://github.com/django-oscar/django-oscar) - Domain-driven e-commerce for Django.
-
-### Editors
-<!--lint ignore awesome-list-item-->
-- [django-ckeditor](https://github.com/shaunsephton/django-ckeditor) - Django admin CKEditor integration.
-- [django-markdownx](https://github.com/adi-/django-markdownx) - Comprehensive Markdown plugin built for Django.
-- [django-markdown-editor](https://github.com/agusmakmun/django-markdown-editor) - Awesome Django Markdown Editor, supported for Bootstrap & Semantic-UI.
-- [django-business-logic](https://github.com/dgk/django-business-logic) - Visual DSL framework for Django.
-- [django-quill-editor](https://github.com/LeeHanYeong/django-quill-editor) - Makes Quill.js easy to use on Django Forms and admin sites.
-- [django-summernote](https://github.com/summernote/django-summernote) - Summernote is a simple WYSIWYG editor.
-- [django-tinymce](https://github.com/jazzband/django-tinymce) - TinyMCE integration for Django.
-- [django-prose](https://github.com/withlogicco/django-prose) - A light weight editor to content creation.
-- [django-ace](https://github.com/django-ace/django-ace) - ACE integration for Django.
-
-### Files/Images
-- [django-cleanup](https://github.com/un1t/django-cleanup) - Zero configuration file/image removal for local and remote files.
-- [django-imagekit](https://github.com/matthewwithanm/django-imagekit) - Django app for processing images for thumbnail, black-and-white and sizes.
-- [django-pictures](https://github.com/codingjoe/django-pictures) - Responsive cross-browser image library using modern codes like AVIF & WebP.
-- [sorl-thumbnail](https://github.com/jazzband/sorl-thumbnail) - Thumbnails for Django.
-
-### Forms
-- [django-bleach](https://github.com/marksweb/django-bleach/) - Integrate bleach into forms and models. See `django-nh3` as an alternative.
-- [django-crispy-forms](https://github.com/django-crispy-forms/django-crispy-forms/) - DRY Django forms.
-- [django-floppyforms](https://github.com/jazzband/django-floppyforms) - Full control of form rendering.
-- [django-formtools](https://github.com/jazzband/django-formtools) - For form previous and multi-step forms, previously part of Django until 1.8.
-- [django-widget-tweaks](https://github.com/jazzband/django-widget-tweaks) - Tweak form field rendering in templates.
-- [django-autocomplete-light](https://github.com/yourlabs/django-autocomplete-light) - Add autocompletion to forms.
-- [django-shapeshifter](https://github.com/kennethlove/django-shapeshifter) - A class-based view to handle multiple forms in one view.
-
-### Full-stack frameworks
-- [ReactPy](https://github.com/reactive-python/reactpy) - It's React, but in Python. Insert dynamically rendered Python into Django templates using the [ReactPy-Django module](https://github.com/reactive-python/reactpy-django).
-- [Reactor](https://github.com/edelvalle/reactor/) - Phoenix LiveView, but for Django.
-- [Sockpuppet](https://sockpuppet.argpar.se/) - Build reactive applications with the Django tooling you already know and love.
-- [Unicorn](https://www.django-unicorn.com/) - A reactive component framework that progressively enhances a normal Django view, makes AJAX calls in the background, and dynamically updates the DOM.
-- [iommi](https://github.com/TriOptima/iommi) - Toolkit for development of CRUD applications without writing HTML or JavaScript.
-
-### General
-- [django-data-browser](https://github.com/tolomea/django-data-browser) - Interactive, user-friendly database explorer.
-- [django-filter](https://github.com/carltongibson/django-filter) - Powerful filters based on Django QuerySets.
-- [django-guardian](https://github.com/django-guardian/django-guardian) - Per object permissions in Django.
-- [django-sql-explorer](https://github.com/groveco/django-sql-explorer) - Share data via SQL queries.
-- [django-tables2](https://github.com/jieter/django-tables2) - HTML tables with pagination/sorting.
-- [django-maintenance-mode](https://github.com/fabiocaccamo/django-maintenance-mode) - Shows a 503 error page when maintenance-mode is on.
-- [django-freeze](https://github.com/fabiocaccamo/django-freeze) - Convert your dynamic django site to a static one with one line of code.
-- [django-nh3](https://github.com/marksweb/django-nh3) - Django integration with for nh3 and is an alternative for django-bleach.
-- [Weblate](https://github.com/WeblateOrg/weblate) - Weblate is a copylefted libre software web-based continuous localization system, used by over 2500 libre projects and companies in more than 165 countries.
-
-### Logging
-- [django-guid](https://github.com/JonasKs/django-guid) - Inject a GUID (Correlation-ID) into every log message in a Django request.
-- [DRF-API-Logger](https://github.com/vishalanandl177/DRF-API-Logger) - An API Logger for your Django Rest Framework project.
-
-### Model Fields
-- [django-any-urlfield](https://github.com/edoburu/django-any-urlfield) - An improved URL selector to choose between internal models and external URLs.
-- [django-colorfield](https://github.com/fabiocaccamo/django-colorfield) - Color field for django models with a nice color-picker widget.
-- [django-model-utils](https://github.com/jazzband/django-model-utils) - Django model mixins and utilities.
-- [django-money](https://github.com/django-money/django-money) - Money fields for forms/models.
-- [django-phonenumber-field](https://github.com/stefanfoulis/django-phonenumber-field) - Model/form field for normalized phone numbers.
-- [django-streamfield](https://github.com/raagin/django-streamfield) - Simple StreamField for plain Django admin (based on Wagtail CMS StreamField idea).
-
-### Models
-- [django-lifecycle](https://github.com/rsinger86/django-lifecycle) - Declarative model lifecycle hooks, an alternative to Signals.
-- [django-mptt](https://github.com/django-mptt/django-mptt) - Modified Preorder Tree Traversal; working with trees of Model instances.
-- [django-taggit](https://github.com/jazzband/django-taggit/) - Simple model tags.
-- [django-reversion](https://github.com/etianen/django-reversion) - Version control for model instances.
-- [django-simple-history](https://github.com/jazzband/django-simple-history) - Store model history and view/revert changes from the admin.
-- [django-polymorphic](https://github.com/django-polymorphic/django-polymorphic) - Django-polymorphic simplifies using inherited models in Django projects.
-- [django-recurrence](https://github.com/django-recurrence/django-recurrence) - Utility for working with recurring dates in Django.
-- [django-treenode](https://github.com/fabiocaccamo/django-treenode) - Abstract model/admin for tree based stuff.
-
-### Performance
-- [django-perf-rec](https://cur.at/GHUO6cn?m=web) - Keep detailed records of the performance of your Django code.
-- [New Relic](https://newrelic.com/python/django) - Time middleware, views, and SQL queries.
-- [Scout](https://docs.scoutapm.com/#django) - Time middleware, template rendering, and SQL queries with automatic N+1 detection.
-- [django-query-profiler](https://github.com/django-query-profiler/django-query-profiler) - Django query profiler to help resolve N+1 queries.
-- [django-silk](https://github.com/jazzband/django-silk) - Live profiling and inspection of HTTP requests and database queries.
-- [py-spy](https://github.com/benfred/py-spy) - Sampling profiler for Python programs.
-- [pyinstrument](https://github.com/joerick/pyinstrument) - Call stack profiler for Python, Django, Flask, FastAPI.
-
-### Search
-- [django-haystack](https://github.com/django-haystack/django-haystack) - Modular search for Django.
-- [django-watson](https://github.com/etianen/django-watson) - Full-text search plugin.
-- [django-admin-search](https://github.com/shinneider/django-admin-search) - Modal filter for django admin.
-- [django-elasticsearch-dsl](https://github.com/django-es/django-elasticsearch-dsl) - Elasticsearch DSL integration for Django.
-
-### Search Engine Optimisation
-- [django-check-seo](https://github.com/kapt-labs/django-check-seo) - Check SEO of pages.
-
-### Security
-- [django-csp](https://github.com/mozilla/django-csp) - Adds [Content-Security-Policy](http://www.w3.org/TR/CSP/) headers to Django.
-- [django-feature-policy](https://github.com/adamchainz/django-feature-policy) - Set the draft security HTTP header `Feature-Policy` on a Django app.
-- [django-protected-media](https://github.com/cobusc/django-protected-media) - Manages media that are considered sensitive in a protected fashion.
-- [DJ Checkup](https://djcheckup.com) - Runs several checks on your deployed Django site to check for common security mistakes.
-
-### Static Assets
-- [django-storages](https://github.com/jschneier/django-storages) - A single library to support multiple custom storage backends for Django.
-- [django-compressor](https://github.com/django-compressor/django-compressor/) - Compress JavaScript/CSS into a single cached file.
-- [easy-thumbnails](https://github.com/SmileyChris/easy-thumbnails) - Image thumbnails for Django.
-- [whitenoise](https://github.com/evansd/whitenoise) - Simplified static file serving for Python websites.
-
-### Task Queues
-- [beatserver](https://github.com/rajasimon/beatserver) - A periodic task scheduler for Django.
-- [django-q](https://github.com/Koed00/django-q) - A multiprocessing distributed task queue.
-- [django-rq](https://github.com/rq/django-rq) - Integration for Redis Queue.
-- [django-redis](https://github.com/niwinz/django-redis) - Full-featured Redis cache backend for Django.
-- [celery](https://github.com/celery/celery) - Robust and broker-agnostic task queues for bigger, performance-focused projects.
-- [flower](https://github.com/mher/flower) - Flower is a web-based tool for monitoring and administrating Celery clusters.
-- [django-celery-beat](https://github.com/celery/django-celery-beat) - A periodic task scheduler with database configured by Django's Admin Panel.
-- [celery-exporter](https://github.com/danihodovic/celery-exporter) - Prometheus & Grafana monitoring of Celery tasks.
-- [django-dramatiq](https://github.com/Bogdanp/django_dramatiq) - Task processing library with a focus on simplicity, reliability, and performance.
-
-### Templates
-
-- [curlylint](https://www.curlylint.org/) - Experimental HTML templates linting for Jinja, Nunjucks, Django templates, Twig, Liquid.
-- [django-components](https://github.com/EmilStenstrom/django-components/) - A way to create simple reusable template components in Django.
-- [django-template-partials](https://github.com/carltongibson/django-template-partials/) - Reusable named inline partials for the Django Template Language.
-- [djhtml](https://github.com/rtts/djhtml) - Django/Jinja template indenter.
-- [djlint](https://www.djlint.com/) - Lint & Format HTML Templates.
-- [slippers](https://mitchel.me/slippers/) - Build reusable components in Django without writing a single line of Python.
-- [JinjaX](https://jinjax.scaletti.dev/) - Super components powers for your Jinja templates.
-
-### Testing
-- [django-debug-toolbar](https://github.com/jazzband/django-debug-toolbar/) - Configurable panels to debug requests/responses.
-- [pytest-django](https://github.com/pytest-dev/pytest-django) - Use pytest features in Django.
-- [django-test-migrations](https://github.com/wemake-services/django-test-migrations) - Test django schema and data migrations, including migrations' order.
-- [django-test-plus](https://github.com/revsys/django-test-plus/) - Useful additions to Django's default TestCase.
-- [factory-boy](https://github.com/FactoryBoy/factory_boy) - Test fixtures replacement.
-- [django-waffle](https://github.com/django-waffle/django-waffle) - A feature flipper for Django.
-- [model-bakery](https://github.com/model-bakers/model_bakery) - Object factory for Django (rename of legacy Model Mommy project).
-- [django-fakery](https://github.com/fcurella/django-fakery) - An easy-to-use implementation of Creation Methods for Django, backed by Faker.
-- [drf-openapi-tester](https://github.com/snok/drf-openapi-tester) - Django test utility for validating Swagger 2.0 and OpenAPI 3.0 documentation.
-- [django-google-optimize](https://github.com/adinhodovic/django-google-optimize) - Django application designed to make running server side Google Optimize A/B tests easy.
-- [django-pattern-library](https://github.com/torchbox/django-pattern-library) - Pattern library generator for Django templates, to help testing of UI components.
-- [storybook-django](https://github.com/torchbox/storybook-django) - Develop Django UI components in isolation, with Storybook.
-
-### URLs
-- [dj-database-url](https://github.com/jacobian/dj-database-url) - Database URLs.
-- [urlman](https://github.com/andrewgodwin/urlman) - A nicer way to do URLs for Django models.
-- [django-robots](https://github.com/jazzband/django-robots) - This is a basic Django application to manage robots.txt files following the robots exclusion protocol, complementing the Django Sitemap contrib app.
-- [django-redirects](https://github.com/fabiocaccamo/django-redirects) - Redirects as they should be, with full control.
-
-### Users
-- [django-allauth](https://github.com/pennersr/django-allauth/) - Improved user registration including social auth.
-- [django-allauth-ui](https://github.com/danihodovic/django-allauth-ui/) - Better looking templates for django-allauth.
-- [django-improved-user](https://github.com/jambonsw/django-improved-user) - A custom Django user that authenticates via email. Follows identity and authentication best practices.
-- [django-organizations](https://github.com/bennylope/django-organizations/) - Multi-user accounts for Django projects.
-- [django-cas-ng](https://github.com/django-cas-ng/django-cas-ng) - Django-cas-ng is Django CAS (Central Authentication Service) 1.0/2.0/3.0 client library to support SSO (Single Sign On) and Single Logout (SLO).
-
-### Views
-- [django-braces](https://github.com/brack3t/django-braces) - Reusable, generic mixins.
-- [django-easy-audit](https://github.com/soynatan/django-easy-audit) - Keep track of user actions.
-- [django-extra-views](https://github.com/AndrewIngram/django-extra-views) - Extra class-based generic views.
-- [django-vanilla-views](https://github.com/tomchristie/django-vanilla-views) - Simpler class-based views in Django.
-- [django-stronghold](https://github.com/mgrouchy/django-stronghold) - Makes all your Django views default login_required.
-
-## Python Packages
-
-_A short list of Python packages that work well with Django._
-
-- [bleach](https://github.com/mozilla/bleach) - Sanitize your inputs/forms.
-- [black](https://github.com/psf/black) - Uncompromising Python code formatter.
-- [coveragepy](https://github.com/nedbat/coveragepy) - Code coverage measurement.
-- [faker](https://github.com/joke2k/faker) - Faker is a Python package that generates fake data for you.
-- [huey](https://github.com/coleifer/huey) - A little task queue for Python.
-- [nplusone](https://github.com/jmcarp/nplusone) - Auto-detect n+1 queries.
-- [pillow](https://github.com/python-pillow/Pillow) - Python Imaging Library.
-- [pytest](https://github.com/pytest-dev/pytest/) - Testing framework.
-- [python-decouple](https://github.com/henriquebastos/python-decouple) - Strict separation of settings from code.
-- [python-slugify](https://github.com/un33k/python-slugify) - Returns unicode slugs.
-- [sentry-python](https://github.com/getsentry/sentry-python) - Error reporting SDK.
-- [python-socketio](https://github.com/miguelgrinberg/python-socketio) - Python implementation of the Socket.IO_ realtime client and server. [(create Socket.io Django server instance)](https://python-socketio.readthedocs.io/en/latest/server.html?highlight=django#creating-a-server-instance)
-
-## Resources
-
-### Official Resources
-
-<!--lint ignore double-link--> 
-- [Project Website](https://www.djangoproject.com/) - Official Django website.
-- [Documentation](https://docs.djangoproject.com/en/dev/) - Comprehensive documentation for all Django versions.
-- [Polls Tutorial](https://docs.djangoproject.com/en/dev/intro/tutorial01/) - Build a polls tutorial while learning Django internals.
-- [Source Code](https://github.com/django/django/) - Hosted on GitHub.
-
-### Educational
-
-- [Django Girls Tutorial](https://tutorial.djangogirls.org/en/) - Use function-based views to build a blog app.
-- [LearnDjango](https://learndjango.com/) - Tutorials and premium courses on Django and Django REST Framework.
-- [Adam Johnson](https://adamj.eu/tech/) - Adam is on the Technical Board of Django and regularly writes tutorials.
-- [TestDriven](https://testdriven.io/blog/) - Multiple Django-specific tutorials on topics like Docker, payments, and more.
-- [Classy Class-Based Views](https://ccbv.co.uk/) - Detailed descriptions of methods/properties/attributes for each generic class-based view.
-- [Classy Django Forms](https://github.com/ana-balica/classy-django-forms) - Detailed descriptions of methods/properties/attributes for each form class.
-- [Classy Django REST Framework](http://www.cdrf.co) - Detailed descriptions with methods/attributes for DRF class-based views and serializers.
-- [Simple is Better than Complex](https://simpleisbetterthancomplex.com/) - Regularly updated website with many tutorials and tips on Django.
-- [Full Stack Python's Django Page](https://www.fullstackpython.com/django.html) - Explanation of Django philosophy and links to other resources and tutorials.
-- [RealPython](https://realpython.com/tutorials/django/) - Many high-quality tutorials on Django.
-- [Mozilla Tutorial](https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django) - Create a lending library app.
-- [Matt Layman](https://www.mattlayman.com) - Regular tutorials and deep-dives on Django topics.
-- [Django Sites](https://www.djangosites.org/) - Comprehensive listing of sites built with Django.
-- [Django Styleguide](https://github.com/HackSoftware/Django-Styleguide) - Styleguide for Django with best practices and examples.
-- [Django Template Tags and Filters](https://www.djangotemplatetagsandfilters.com/) - Additional docs on Django's 57 built-in template filters and 27 template tags.
-- [Django for Everybody](https://www.dj4e.com/) - A complete course for webdev beginners focused on Django.
-- [CS50W](https://cs50.harvard.edu/web/2020/) - Harvard's University introductory course to web development, it explains Django as backend framework.
-
-### Community
-
-<!--lint disable double-link-->
-- [Django Forum](https://forum.djangoproject.com/) - Official Discourse board.
-- [Community Page](https://www.djangoproject.com/community/) - Featuring feeds of Community Blog Posts, Jobs, and more.
-- [Django Users Google Group](https://groups.google.com/forum/#!forum/django-users/) - Very active discussion board for questions/answers.
-- [Developers Google Group](https://groups.google.com/forum/#!forum/django-developers/) - For contributions to Django itself only.
-- [Mastodon](https://fosstodon.org/@django) - For official announcements on updates, security fixes, etc.
-- [Twitter](https://twitter.com/djangoproject/) - For official announcements on updates, security fixes, etc.
-- [Discord Server](https://discord.com/invite/xcRH6mN4fa) - Django Discord Community.
-- IRC Channel - Chat with other Django users at irc://irc.freenode.net/django.
-<!--lint enable double-link-->
-
-### Conferences
-
-- [DjangoCon US](https://djangocon.us/) ([YouTube Channel](https://www.youtube.com/channel/UC0yY6a79pPY9J0ShIHRf6yw))
-- [DjangoCon Europe](https://djangocon.eu/) ([YouTube Channel](https://www.youtube.com/user/djangoconeurope))
-- [DjangoCon AU](https://djangocon.com.au/)
-- [DjangoCon Africa](https://djangocon.africa/)
-- [Django Day Copenhagen](https://github.com/wsvincent/awesome-django#conferences)
-- [PyCon US](https://us.pycon.org/2020/) ([YouTube Channel](https://www.youtube.com/channel/UCsX05-2sVSH7Nx3zuk3NYuQ))
-- [PyCon Australia](https://2019.pycon-au.org/) ([YouTube Channel](https://www.youtube.com/user/PyConAU))
-- [Euro Python](https://ep2019.europython.eu/) ([YouTube Channel](https://www.youtube.com/user/PythonItalia))
-- [Django Under the Hood](https://www.youtube.com/channel/UC9T1dhIlL_8Va9DxvKRowBw/videos)
-- [Complete listing of all PyCons globally](https://pycon.org)
-
-### Job Boards
-
-- [Django News Jobs](https://jobs.django-news.com/) - A Django job board that also aggregates other job boards.
-- [Django Gigs](https://djangogigs.com) - This platform caters specifically to freelance and full-time Django developers. 
-- [Django Jobs](https://djangojobs.net) - Django jobs posting for hiring Django Python developers.
-- [Python.org Job Boards](https://www.python.org/jobs/) - While not exclusively for Django, this job board is hosted by the official Python website and features a range of Python and Django-related job opportunities.
-
-### Newsletters
-
-- [Django News](https://django-news.com) - Weekly newsletter on announcements, articles, projects, and talks.
-
-### Podcasts
-
-- [Django Chat](https://djangochat.com/) - A weekly podcast from William Vincent and Django Fellow Carlton Gibson with discussions of core Django concepts and regular guests.
-- [Django Riffs](https://djangoriffs.com) - A new podcast from Matt Layman.
-- [Running in Production](https://runninginproduction.com/tags/django) - Focused on tech stacks with many episodes specifically on Django.
-- [TalkPython](https://talkpython.fm/) - The leading Python podcast with several episodes on Django.
-- [Podcast Init](https://www.pythonpodcast.com/) - A popular Python podcast that features Django guests on occasion.
-
-
-### Books
-
-_Django 4.2_
-- [Django for Beginners: Build websites with Python and Django](https://djangoforbeginners.com/)
-
-_Django 4.0_
-- [Boost Your Django DX](https://adamchainz.gumroad.com/l/byddx)
-- [Django for APIs: Build web APIs with Python and Django](https://djangoforapis.com/)
-- [Django for Professionals: Production websites with Python and Django](https://djangoforprofessionals.com/)
-- [Django 4 By Example: Build powerful and reliable Python web applications from scratch](https://www.amazon.com/dp/1801813051/)
-
-_Django 3.2_
-- [Speed Up Your Django Tests](https://adamj.eu/tech/2020/05/04/new-book-speed-up-your-django-tests/)
-- [Two Scoops of Django 3.x: Best Practices for the Django Web Framework](https://www.feldroy.com/books/two-scoops-of-django-3-x)
-- [A Wedge of Django: Covers Python 3.8 and Django 3.x](https://www.feldroy.com/books/a-wedge-of-django)
-
-
-## Hosting
-
-### PaaS (Platforms-as-a-Service)
-- [Appliku](https://appliku.com)
-- [Dokku](https://dokku.com)
-- [Divio](https://www.divio.com)
-- [Fly](https://fly.io)
-- [Google Cloud](https://cloud.google.com/python/django/)
-- [Heroku](https://www.heroku.com)
-- [Microsoft Azure](https://azure.microsoft.com/en-us/develop/python/)
-- [Platform.sh](https://platform.sh)
-- [PythonAnywhere](https://www.pythonanywhere.com)
-- [Railway](https://railway.app)
-- [Render](https://render.com)
-- [Vercel](https://vercel.com/home)
-
-### IaaS (Infrastructure-as-a-Service)
-- [Digital Ocean](https://www.digitalocean.com)
-- [Linode](https://www.linode.com)
-- [Amazon Lightsail](https://aws.amazon.com/lightsail/)
-- [Hetzner](https://www.hetzner.com)
-
-## Projects
-
-### Boilerplate
-- [cookiecutter-django](https://github.com/pydanny/cookiecutter-django/) - A full-bodied starter project, highly customizable.
-- [django-base-site](https://github.com/epicserve/django-base-site/) - A Django site with many common third-party packages pre-installed.
-- [djangox](https://github.com/wsvincent/djangox/) - Batteries included starter project for Pip, Pipenv, or Docker.
-- [DRFx](https://github.com/wsvincent/drfx/) - A DRF starter with user auth, Pipenv, and other goodies.
-- [django-project-template](https://github.com/jpadilla/django-project-template) - A deliberately basic project that has multiple staging environments and Heroku deployment config.
-- [docker-django](https://github.com/erroneousboat/docker-django/) - A quick starter guide for Django and Docker together.
-- [django-docker-template](https://github.com/amerkurev/django-docker-template) - Dockerized Django with Postgres, Gunicorn, and Traefik (with auto renew Let's Encrypt).
-- [django-startproject](https://github.com/jefftriplett/django-startproject) - Django start project template with batteries.
-- [wemake-django-template](https://github.com/wemake-services/wemake-django-template/) - Bleeding edge Django template focused on code quality and security.
-- [django-webpack-starter](https://github.com/khadegd/django-webpack-starter) - Django Webpack starter template for using Webpack 4.
-- [sos-django-template](https://github.com/erayerdin/sos-django-template) - Django starter template with separate dev and production settings.
-- [django-docker-heroku-template](https://github.com/bfirsh/django-docker-heroku-template) - A template with Docker, GitHub Actions, and Heroku set up for dev/test/prod, plus various other best practices.
-- [cookiecutter-vue-django](https://github.com/ilikerobots/cookiecutter-vue-django) - Django + Vue starter project fusing Vue SFCs & Django Templates.
-- [launchr](https://github.com/jayfk/launchr) - Launchr is a specialized Django starter template for SaaS web apps.
-- [sidewinder](https://github.com/stribny/sidewinder/) - A Django starter kit that focuses on good defaults, developer experience, and deployment. 
-
-### Open Source Projects
-- [Blog app with users and forms](https://github.com/wsvincent/djangoforbeginners/tree/master/ch7-blog-app-with-users/)
-- [Newspaper app with custom user model, full user auth](https://github.com/wsvincent/djangoforbeginners/tree/master/ch15-comments)
-- [pythonic-news](https://github.com/sebst/pythonic-news) - Hacker News clone.
-- [Behavior-Driven Development with Aloe](https://github.com/testdrivenio/django-aloe-bdd/)
-- [Image Sharing Blog](https://github.com/MeNsaaH/soMedia)
-- [Bootcamp: An enterprise social network](https://github.com/vitorfs/bootcamp)
-- [Zulip](https://github.com/zulip/zulip/) - Open-source team chat.
-- [Django-CRM](https://github.com/MicroPyramid/Django-CRM/) - Open Source Python CRM based on Django.
-- [django-job-portal](https://github.com/manjurulhoque/django-job-portal) - Job portal application using Django.
-- [Built with Django](https://builtwithdjango.com) - Curated list of awesome Django projects.
-- [PostHog](https://github.com/PostHog/posthog) - Open-source product analytics.
-- [HyperKitty](https://gitlab.com/mailman/hyperkitty) - A web interface to access GNU Mailman v3 archives.
-- [Healthchecks](https://github.com/healthchecks/healthchecks) - A Cron Monitoring Tool written in Python & Django.
-- [Flagsmith](https://github.com/Flagsmith/flagsmith) - Open-source Feature Flagging, Remote Config, and AB testing.
-
-## Django REST Framework
-
-_The most popular way to build web APIs with Django._
-
-### DRF Resources
-
-<!--lint disable double-link-->
-- [Official Documentation](https://www.django-rest-framework.org/)
-- [DRF Source Code](https://github.com/encode/django-rest-framework)
-- [awesome-django-rest-framework](https://github.com/nioperas06/awesome-django-rest-framework)
-<!--lint enable double-link-->
-
-### DRF Tutorials
-
-<!--lint ignore double-link-->
-- [Official REST Framework - A Beginner's Guide](https://learndjango.com/tutorials/official-django-rest-framework-tutorial-beginners)
-- [Building APIs with Django and DRF](https://books.agiliq.com/projects/django-api-polls-tutorial/en/latest/)
-- [DRF with React](https://www.valentinog.com/blog/drf/)
-- [Making React and Django play well together](https://fractalideas.com/blog/making-react-and-django-play-well-together/)
-
-## Wagtail
-
-_Wagtail, the powerful CMS for modern websites._
-
-### Wagtail Resources
-<!--lint disable double-link-->
-- [Official website](https://wagtail.org/)
-- [Developer documentation](https://docs.wagtail.org/en/stable/)
-- [User documentation](https://guide.wagtail.org/en-latest/)
-- [Wagtail Source Code](https://github.com/wagtail/wagtail/)
-- [awesome-wagtail](https://github.com/springload/awesome-wagtail)
-- [This week in Wagtail](https://wagtail.org/this-week-in-wagtail/) - A (most) weekly email with updates from the Wagtail core team.
-- [Wagtail Space](https://www.wagtail.space/) - Wagtail CMS events around the world.
-<!--lint enable double-link-->
+<p dir="auto"><font style="vertical-align: inherit;"></font><a href="https://www.djangoproject.com/fundraising/" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">请考虑通过向Django 软件基金会</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">捐款</font><font style="vertical-align: inherit;">、通过</font></font><a href="https://github.com/sponsors/django"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">GitHub Sponsors</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">进行赞助或购买</font></font><a href="https://django.threadless.com/" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">官方商品</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">来支持 Django 。</font></font></p>
+<h2 tabindex="-1" dir="auto"><a id="user-content-contents" class="anchor" aria-hidden="true" tabindex="-1" href="#contents"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">内容</font></font></h2>
+
+
+
+<ul dir="auto">
+<li><a href="#third-party-packages"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">第三方软件包</font></font></a>
+<ul dir="auto">
+<li><a href="#admin"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">行政</font></font></a></li>
+<li><a href="#apis"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">蜜蜂</font></font></a></li>
+<li><a href="#async"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">异步</font></font></a></li>
+<li><a href="#caching"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">缓存</font></font></a></li>
+<li><a href="#commands"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">命令</font></font></a></li>
+<li><a href="#configuration"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">配置</font></font></a></li>
+<li><a href="#content-management-systems"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">内容管理系统</font></font></a></li>
+<li><a href="#database-connectors"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">数据库连接器</font></font></a></li>
+<li><a href="#ecommerce"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">电子商务</font></font></a></li>
+<li><a href="#editors"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">编辑</font></font></a></li>
+<li><a href="#filesimages"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">文件/图像</font></font></a></li>
+<li><a href="#forms"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">形式</font></font></a></li>
+<li><a href="#full-stack-frameworks"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">全栈框架</font></font></a></li>
+<li><a href="#general"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">一般的</font></font></a></li>
+<li><a href="#logging"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">记录</font></font></a></li>
+<li><a href="#model-fields"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">模型字段</font></font></a></li>
+<li><a href="#models"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">楷模</font></font></a></li>
+<li><a href="#performance"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">表现</font></font></a></li>
+<li><a href="#search"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">搜索</font></font></a></li>
+<li><a href="#search-engine-optimisation"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">搜索引擎优化</font></font></a></li>
+<li><a href="#security"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">安全</font></font></a></li>
+<li><a href="#static-assets"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">静态资源</font></font></a></li>
+<li><a href="#task-queues"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">任务队列</font></font></a></li>
+<li><a href="#templates"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">模板</font></font></a></li>
+<li><a href="#testing"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">测试</font></font></a></li>
+<li><a href="#urls"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">网址</font></font></a></li>
+<li><a href="#users"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">用户</font></font></a></li>
+<li><a href="#views"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">意见</font></font></a></li>
+</ul>
+</li>
+<li><a href="#python-packages"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Python 包</font></font></a></li>
+<li><a href="#resources"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">资源</font></font></a>
+<ul dir="auto">
+<li><a href="#official-resources"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">官方资源</font></font></a></li>
+<li><a href="#educational"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">教育性</font></font></a></li>
+<li><a href="#community"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">社区</font></font></a></li>
+<li><a href="#conferences"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">会议</font></font></a></li>
+<li><a href="#job-boards"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">工作委员会</font></font></a></li>
+<li><a href="#newsletters"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">时事通讯</font></font></a></li>
+<li><a href="#podcasts"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">播客</font></font></a></li>
+<li><a href="#books"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">图书</font></font></a></li>
+</ul>
+</li>
+<li><a href="#hosting"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">托管</font></font></a>
+<ul dir="auto">
+<li><a href="#paas-platforms-as-a-service"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">PaaS（平台即服务）</font></font></a></li>
+<li><a href="#iaas-infrastructure-as-a-service"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">IaaS（基础设施即服务）</font></font></a></li>
+</ul>
+</li>
+<li><a href="#projects"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">项目</font></font></a>
+<ul dir="auto">
+<li><a href="#boilerplate"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">样板文件</font></font></a></li>
+<li><a href="#open-source-projects"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">开源项目</font></font></a></li>
+</ul>
+</li>
+<li><a href="#django-rest-framework"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Django REST 框架</font></font></a>
+<ul dir="auto">
+<li><a href="#drf-resources"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">DRF资源</font></font></a></li>
+<li><a href="#drf-tutorials"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">DRF 教程</font></font></a></li>
+</ul>
+</li>
+<li><a href="#wagtail"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">鹡鸰</font></font></a>
+<ul dir="auto">
+<li><a href="#wagtail-resources"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">鹡鸰资源</font></font></a></li>
+</ul>
+</li>
+</ul>
+
+
+<h2 tabindex="-1" dir="auto"><a id="user-content-third-party-packages" class="anchor" aria-hidden="true" tabindex="-1" href="#third-party-packages"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">第三方软件包</font></font></h2>
+<p dir="auto"><em><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">有关所有可用包的完整列表，请参阅</font></font><a href="https://djangopackages.org/" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Django Packages</font></font></a></em></p>
+<h3 tabindex="-1" dir="auto"><a id="user-content-admin" class="anchor" aria-hidden="true" tabindex="-1" href="#admin"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">行政</font></font></h3>
+<ul dir="auto">
+<li><a href="https://github.com/sehmaschine/django-grappelli"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">django-grappelli</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 为管理员提供的爵士皮肤。</font></font></li>
+<li><a href="https://github.com/farridav/django-jazzmin"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">django-jazzmin</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - django 管理的嵌入式主题，利用 AdminLTE 3 和 Bootstrap 4 让您的管理员看起来很爵士。</font></font></li>
+<li><a href="https://github.com/arteria/django-hijack"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">django-hijack</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 管理员可以代表其他用户登录并工作，而无需知道他们的凭据。</font></font></li>
+<li><a href="https://github.com/django-import-export/django-import-export"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">django-import-export</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 用于通过管理集成导入和导出数据的 Django 应用程序和库。</font></font></li>
+<li><a href="https://github.com/dmpayton/django-admin-honeypot"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">django-admin-honeypot</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 配置蜜罐以查看谁试图入侵您的网站。</font></font></li>
+<li><a href="https://github.com/skorokithakis/django-loginas"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">django-loginas</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - Django 管理员的“以用户身份登录”。</font></font></li>
+<li><a href="https://github.com/avallbona/Impostor"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">impostor</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - Impostor 是一个 Django 应用程序，它允许员工使用自己的用户名和密码以不同的用户身份登录。</font></font></li>
+<li><a href="https://pypi.org/project/django-impersonate/" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">django-impersonate</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 允许超级用户“模拟”其他非超级用户帐户。</font></font></li>
+<li><a href="https://github.com/dizballanze/django-admin-env-notice"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">django-admin-env-notice</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 在 Django Admin 中直观地区分环境，例如：</font></font><code>development</code><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">, </font></font><code>staging</code><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">, </font></font><code>production</code><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">。</font></font></li>
+<li><a href="https://github.com/fabiocaccamo/django-admin-interface"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">django-admin-interface</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 由管理员本身自定义管理（颜色，标题，标题，徽标），弹出窗口被模式取代。</font></font></li>
+<li><a href="https://github.com/MaistrenkoAnton/django-material-admin"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">django-material-admin</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - django 管理的材料设计。</font></font></li>
+<li><a href="https://github.com/PetrDlouhy/django-related-admin"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">django-lated-admin</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 一个帮助程序库，允许您跨外键关系编写 list_displays。</font></font></li>
+<li><a href="https://github.com/globophobe/django-semantic-admin"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">django-semantic-admin</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - Django Semantic UI 管理主题。</font></font></li>
+<li><a href="https://github.com/b1go/django-jet-reboot"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">django-jet-reboot</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - Django Jet 是 Django 管理界面的现代模板，具有改进的功能。</font></font></li>
+<li><a href="https://github.com/otto-torino/django-baton"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">django-baton</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 一个基于 bootstrap 5 的酷炫、现代且响应灵敏的 django 管理应用程序。</font></font></li>
+<li><a href="https://github.com/jrief/django-admin-sortable2"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">django-admin-sortable2</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - Django 管理界面中对象的通用拖放排序。</font></font></li>
+</ul>
+<h3 tabindex="-1" dir="auto"><a id="user-content-apis" class="anchor" aria-hidden="true" tabindex="-1" href="#apis"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">蜜蜂</font></font></h3>
+
+<ul dir="auto">
+<li><a href="https://github.com/encode/django-rest-framework"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">django-rest-framework</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - Django 的 Web API。</font></font></li>
+<li><a href="https://github.com/adamchainz/django-cors-headers"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">django-cors-headers</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 如果您的后端和前端位于不同的服务器上，则需要这个。</font></font></li>
+<li><a href="https://github.com/jazzband/dj-rest-auth"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">dj-rest-auth</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - Django Rest 框架的身份验证。</font></font></li>
+<li><a href="https://github.com/James1345/django-rest-knox"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">django-rest-knox</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - django-rest-auth 的身份验证模块。</font></font></li>
+<li><a href="https://github.com/sunscrapers/djoser"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">djoser</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - Django 身份验证的 REST 实现。</font></font></li>
+<li><a href="https://github.com/paul-wolf/djaq"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">djaq</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 具有强大查询语言的 Django 模型即时远程 API。</font></font></li>
+<li><a href="https://github.com/davesque/django-rest-framework-simplejwt"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">django-rest-framework-simplejwt</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - DRF 的 JSON Web 令牌。</font></font></li>
+<li><a href="https://github.com/owais/django-webpack-loader"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">django-webpack-loader</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 透明地将 webpack 与 Django 结合使用。</font></font></li>
+<li><a href="https://github.com/axnsan12/drf-yasg"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">drf-yasg</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 从 Django REST Framework 代码自动生成真正的 Swagger/OpenAPI 2.0 模式。</font></font></li>
+<li><a href="https://github.com/graphql-python/graphene-django"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">graphene-django</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - Django 的 GraphQL.</font></font></li>
+<li><a href="https://github.com/devind-team/graphene-django-filter"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">graphene-django-filter</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 在 Django 的 GraphQL 中实现和/或/非运算符的高级过滤器。</font></font></li>
+<li><a href="https://django-ninja.rest-framework.com/" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">django-ninja</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - Django Ninja - 基于类型注释的快速 Django REST 框架。</font></font></li>
+<li><a href="https://github.com/django-tastypie/django-tastypie"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">django-tastypie</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 自 2010 年以来为 Django 应用程序创建美味的 API。</font></font></li>
+<li><a href="https://github.com/tfranzel/drf-spectacular"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">drf-spectaulous</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 为 Django REST 框架生成健全且灵活的 OpenAPI 3 模式。</font></font></li>
+</ul>
+
+<h3 tabindex="-1" dir="auto"><a id="user-content-async" class="anchor" aria-hidden="true" tabindex="-1" href="#async"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">异步</font></font></h3>
+<ul dir="auto">
+<li><a href="https://github.com/django/channels/"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Channels</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 对 Django 的异步支持。</font></font></li>
+<li><a href="https://github.com/encode/starlette"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">starlette</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - ASGI 框架。</font></font></li>
+</ul>
+<h3 tabindex="-1" dir="auto"><a id="user-content-caching" class="anchor" aria-hidden="true" tabindex="-1" href="#caching"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">缓存</font></font></h3>
+<ul dir="auto">
+<li><a href="https://github.com/noripyt/django-cachalot"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">django-cachalot</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 缓存您的 Django ORM 查询并自动使其失效。</font></font></li>
+<li><a href="https://github.com/Suor/django-cacheops"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">django-cacheops</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 一个灵活的 ORM 缓存，具有自动粒度事件驱动的失效功能。</font></font></li>
+</ul>
+<h3 tabindex="-1" dir="auto"><a id="user-content-commands" class="anchor" aria-hidden="true" tabindex="-1" href="#commands"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">命令</font></font></h3>
+<ul dir="auto">
+<li><a href="https://github.com/django-extensions/django-extensions/"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">django-extensions</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 自定义管理扩展，特别是</font></font><code>runserver_plus</code><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">和</font></font><code>shell_plus</code><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">.</font></font></li>
+<li><a href="https://github.com/GaretJax/django-click"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">django-click</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 使用 click CLI 库编写 Django 管理命令。</font></font></li>
+<li><a href="https://github.com/django-dbbackup/django-dbbackup"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">django-dbbackup</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 帮助备份和恢复项目数据库和媒体文件的管理命令。</font></font></li>
+<li><a href="https://github.com/Gusakovskiy/django-liquidb"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">django-liquidb</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 用于简化迁移管理和数据库方案状态更改的 Django 应用程序。</font></font></li>
+</ul>
+<h3 tabindex="-1" dir="auto"><a id="user-content-configuration" class="anchor" aria-hidden="true" tabindex="-1" href="#configuration"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">配置</font></font></h3>
+
+<ul dir="auto">
+<li><a href="https://github.com/candidco/confidential"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">机密</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">- 管理配置和机密（通过 CLI 支持）。</font></font></li>
+<li><a href="https://github.com/joke2k/django-environ"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">django-environ</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 环境变量。</font></font></li>
+<li><a href="https://github.com/sobolevn/django-split-settings"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">django-split-settings</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 组织多个设置文件。</font></font></li>
+<li><a href="https://github.com/jazzband/django-constance"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">django-constance</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 一个 Django 应用程序，用于在可插入后端（内置 Redis 和 Django 模型后端）中存储动态设置，并与 Django 管理应用程序集成。</font></font></li>
+<li><a href="https://github.com/jazzband/django-configurations"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">django-configurations</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 通过依赖 Python 类的可组合性并遵循</font></font><a href="https://12factor.net/config" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">十二因素应用程序</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">的原则来简化 Django 项目配置。</font></font></li>
+<li><a href="https://www.dynaconf.com/django/" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">dynaconf</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - Dynaconf 从多个源（多种文件格式、环境变量、redis、vault、etcd）加载 django 设置，管理机密，并允许不同的合并策略，所有这些都遵循</font></font><a href="https://12factor.net/config" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">十二因素应用程序</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">。</font></font></li>
+<li><a href="https://github.com/fabiocaccamo/django-extra-settings"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">django-extra-settings</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 仅使用 django admin 配置和管理键入的额外设置。</font></font></li>
+<li><a href="https://github.com/sloria/environs"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">environs</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 简化的环境变量解析，附带安装附加包的</font></font><a href="https://github.com/sloria/environs#usage-with-django"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Django 帮助程序</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">。</font></font></li>
+</ul>
+
+<ul dir="auto">
+<li><a href="https://github.com/funkybob/django-classy-settings"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">django-classy-settings</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 基于类的设置，可保持环境有序，并可轻松访问类型化环境变量。</font></font></li>
+</ul>
+<h3 tabindex="-1" dir="auto"><a id="user-content-content-management-systems" class="anchor" aria-hidden="true" tabindex="-1" href="#content-management-systems"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">内容管理系统</font></font></h3>
+
+<ul dir="auto">
+<li><a href="https://github.com/wagtail/wagtail"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">wagtail</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 流行的 Django 内容管理系统（CMS）。</font><font style="vertical-align: inherit;">也见</font></font><a href="https://github.com/springload/awesome-wagtail"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">真棒鹡鸰</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">。</font></font></li>
+<li><a href="https://github.com/stephenmcd/mezzanine"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Mezzanine</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - CMS 框架。</font></font></li>
+<li><a href="https://github.com/divio/django-cms"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">django-cms</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - Django 的 CMS。</font></font></li>
+<li><a href="https://github.com/feincms/feincms"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">feincms</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 一个可扩展的基于 Django 的 CMS。</font></font></li>
+<li><a href="https://github.com/APSL/puput"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">puput</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 具有 Wagtail 的博客应用程序功能.</font></font></li>
+</ul>
+
+<h3 tabindex="-1" dir="auto"><a id="user-content-database-connectors" class="anchor" aria-hidden="true" tabindex="-1" href="#database-connectors"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">数据库连接器</font></font></h3>
+<ul dir="auto">
+<li><a href="https://github.com/doableware/djongo"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">djongo</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - Django 和 MongoDB 数据库连接器。</font></font></li>
+</ul>
+<h3 tabindex="-1" dir="auto"><a id="user-content-ecommerce" class="anchor" aria-hidden="true" tabindex="-1" href="#ecommerce"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">电子商务</font></font></h3>
+<ul dir="auto">
+<li><a href="https://github.com/mirumee/saleor"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">saleor</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 基于 GraphQL 的 Django 电子商务平台。</font></font></li>
+<li><a href="https://github.com/awesto/django-shop"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">django-shop</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 基于 Django 的商店系统。</font></font></li>
+<li><a href="https://github.com/shuup/shuup"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">shuup</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - Django 电子商务平台。</font></font></li>
+<li><a href="https://github.com/django-oscar/django-oscar"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">django-oscar</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - Django 领域驱动的电子商务。</font></font></li>
+</ul>
+<h3 tabindex="-1" dir="auto"><a id="user-content-editors" class="anchor" aria-hidden="true" tabindex="-1" href="#editors"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">编辑</font></font></h3>
+
+<ul dir="auto">
+<li><a href="https://github.com/shaunsephton/django-ckeditor"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">django-ckeditor</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - Django 管理 CKEditor 集成。</font></font></li>
+<li><a href="https://github.com/adi-/django-markdownx"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">django-markdownx</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 为 Django 构建的综合 Markdown 插件。</font></font></li>
+<li><a href="https://github.com/agusmakmun/django-markdown-editor"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">django-markdown-editor</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 很棒的 Django Markdown 编辑器，支持 Bootstrap 和 Semantic-UI.</font></font></li>
+<li><a href="https://github.com/dgk/django-business-logic"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">django-business-logic</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - Django 的可视化 DSL 框架。</font></font></li>
+<li><a href="https://github.com/LeeHanYeong/django-quill-editor"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">django-quill-editor</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 使 Quill.js 在 Django 表单和管理站点上易于使用。</font></font></li>
+<li><a href="https://github.com/summernote/django-summernote"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">django-summernote</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - Summernote 是一个简单的所见即所得编辑器。</font></font></li>
+<li><a href="https://github.com/jazzband/django-tinymce"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">django-tinymce</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - Django 的 TinyMCE 集成。</font></font></li>
+<li><a href="https://github.com/withlogicco/django-prose"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">django-prose</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 用于内容创建的轻量级编辑器。</font></font></li>
+<li><a href="https://github.com/django-ace/django-ace"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">django-ace</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - Django 的 ACE 集成。</font></font></li>
+</ul>
+<h3 tabindex="-1" dir="auto"><a id="user-content-filesimages" class="anchor" aria-hidden="true" tabindex="-1" href="#filesimages"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">文件/图像</font></font></h3>
+<ul dir="auto">
+<li><a href="https://github.com/un1t/django-cleanup"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">django-cleanup</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 本地和远程文件的零配置文件/图像删除。</font></font></li>
+<li><a href="https://github.com/matthewwithanm/django-imagekit"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">django-imagekit</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 用于处理缩略图、黑白和尺寸图像的 Django 应用程序。</font></font></li>
+<li><a href="https://github.com/codingjoe/django-pictures"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">django-pictures</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 使用 AVIF 和 WebP 等现代代码的响应式跨浏览器图像库。</font></font></li>
+<li><a href="https://github.com/jazzband/sorl-thumbnail"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">sorl-thumbnail</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - Django 的缩略图.</font></font></li>
+</ul>
+<h3 tabindex="-1" dir="auto"><a id="user-content-forms" class="anchor" aria-hidden="true" tabindex="-1" href="#forms"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">形式</font></font></h3>
+<ul dir="auto">
+<li><a href="https://github.com/marksweb/django-bleach/"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">django-bleach</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 将漂白剂集成到表单和模型中。</font><font style="vertical-align: inherit;">看看</font></font><code>django-nh3</code><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">作为替代方案。</font></font></li>
+<li><a href="https://github.com/django-crispy-forms/django-crispy-forms/"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">django-crispy-forms</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 干燥的 Django 表单。</font></font></li>
+<li><a href="https://github.com/jazzband/django-floppyforms"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">django-floppyforms</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 完全控制表单渲染。</font></font></li>
+<li><a href="https://github.com/jazzband/django-formtools"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">django-formtools</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 用于之前的表单和多步表单，之前是 Django 的一部分，直到 1.8。</font></font></li>
+<li><a href="https://github.com/jazzband/django-widget-tweaks"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">django-widget-tweaks</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 调整模板中的表单字段渲染。</font></font></li>
+<li><a href="https://github.com/yourlabs/django-autocomplete-light"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">django-autocomplete-light</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 向表单添加自动完成功能。</font></font></li>
+<li><a href="https://github.com/kennethlove/django-shapeshifter"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">django-shapeshifter</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 一种基于类的视图，用于在一个视图中处理多种表单。</font></font></li>
+</ul>
+<h3 tabindex="-1" dir="auto"><a id="user-content-full-stack-frameworks" class="anchor" aria-hidden="true" tabindex="-1" href="#full-stack-frameworks"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">全栈框架</font></font></h3>
+<ul dir="auto">
+<li><a href="https://github.com/reactive-python/reactpy"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">ReactPy</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 它是 React，但使用 Python。</font></font><a href="https://github.com/reactive-python/reactpy-django"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">使用ReactPy-Django 模块</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">将动态渲染的 Python 插入到 Django 模板中</font><font style="vertical-align: inherit;">。</font></font></li>
+<li><a href="https://github.com/edelvalle/reactor/"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Reactor</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - Phoenix LiveView，但适用于 Django。</font></font></li>
+<li><a href="https://sockpuppet.argpar.se/" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Sockpuppet</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 使用您已经了解和喜爱的 Django 工具构建反应式应用程序。</font></font></li>
+<li><a href="https://www.django-unicorn.com/" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Unicorn</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 一个反应式组件框架，可逐步增强普通 Django 视图，在后台进行 AJAX 调用，并动态更新 DOM。</font></font></li>
+<li><a href="https://github.com/TriOptima/iommi"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">iommi</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 用于开发 CRUD 应用程序的工具包，无需编写 HTML 或 JavaScript。</font></font></li>
+</ul>
+<h3 tabindex="-1" dir="auto"><a id="user-content-general" class="anchor" aria-hidden="true" tabindex="-1" href="#general"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">一般的</font></font></h3>
+<ul dir="auto">
+<li><a href="https://github.com/tolomea/django-data-browser"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">django-data-browser</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 交互式、用户友好的数据库浏览器。</font></font></li>
+<li><a href="https://github.com/carltongibson/django-filter"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">django-filter</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 基于 Django QuerySets 的强大过滤器。</font></font></li>
+<li><a href="https://github.com/django-guardian/django-guardian"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">django-guardian</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - Django 中的每个对象权限。</font></font></li>
+<li><a href="https://github.com/groveco/django-sql-explorer"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">django-sql-explorer</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 通过 SQL 查询共享数据。</font></font></li>
+<li><a href="https://github.com/jieter/django-tables2"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">django-tables2</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 具有分页/排序功能的 HTML 表格。</font></font></li>
+<li><a href="https://github.com/fabiocaccamo/django-maintenance-mode"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">django-maintenance-mode</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 当维护模式打开时显示 503 错误页面。</font></font></li>
+<li><a href="https://github.com/fabiocaccamo/django-freeze"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">django-freeze</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 使用一行代码将动态 django 站点转换为静态站点。</font></font></li>
+<li><a href="https://github.com/marksweb/django-nh3"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">django-nh3</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - Django 与 nh3 集成，是 django-bleach 的替代品.</font></font></li>
+<li><a href="https://github.com/WeblateOrg/weblate"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Weblate</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - Weblate 是一个基于网络的 Copyleft 自由软件连续本地化系统，被超过 165 个国家/地区的 2500 多个自由项目和公司使用。</font></font></li>
+</ul>
+<h3 tabindex="-1" dir="auto"><a id="user-content-logging" class="anchor" aria-hidden="true" tabindex="-1" href="#logging"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">记录</font></font></h3>
+<ul dir="auto">
+<li><a href="https://github.com/JonasKs/django-guid"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">django-guid</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 将 GUID (Correlation-ID) 注入 Django 请求中的每个日志消息中。</font></font></li>
+<li><a href="https://github.com/vishalanandl177/DRF-API-Logger"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">DRF-API-Logger</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - Django Rest Framework 项目的 API 记录器。</font></font></li>
+</ul>
+<h3 tabindex="-1" dir="auto"><a id="user-content-model-fields" class="anchor" aria-hidden="true" tabindex="-1" href="#model-fields"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">模型字段</font></font></h3>
+<ul dir="auto">
+<li><a href="https://github.com/edoburu/django-any-urlfield"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">django-any-urlfield</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 改进的 URL 选择器，用于在内部模型和外部 URL 之间进行选择。</font></font></li>
+<li><a href="https://github.com/fabiocaccamo/django-colorfield"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">django-colorfield</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - django 模型的色域，带有漂亮的颜色选择器小部件。</font></font></li>
+<li><a href="https://github.com/jazzband/django-model-utils"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">django-model-utils</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - Django 模型混合和实用程序。</font></font></li>
+<li><a href="https://github.com/django-money/django-money"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">django-money</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 表单/模型的货币字段。</font></font></li>
+<li><a href="https://github.com/stefanfoulis/django-phonenumber-field"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">django-phonenumber-field</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 标准化电话号码的模型/表单字段。</font></font></li>
+<li><a href="https://github.com/raagin/django-streamfield"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">django-streamfield</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 用于普通 Django 管理的简单 StreamField （基于 Wagtail CMS StreamField 想法）.</font></font></li>
+</ul>
+<h3 tabindex="-1" dir="auto"><a id="user-content-models" class="anchor" aria-hidden="true" tabindex="-1" href="#models"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">楷模</font></font></h3>
+<ul dir="auto">
+<li><a href="https://github.com/rsinger86/django-lifecycle"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">django-lifecycle</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 声明式模型生命周期挂钩，信号的替代品。</font></font></li>
+<li><a href="https://github.com/django-mptt/django-mptt"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">django-mptt</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 修改后的预序树遍历；</font><font style="vertical-align: inherit;">使用模型实例树。</font></font></li>
+<li><a href="https://github.com/jazzband/django-taggit/"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">django-taggit</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 简单模型标签。</font></font></li>
+<li><a href="https://github.com/etianen/django-reversion"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">django-reversion</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 模型实例的版本控制。</font></font></li>
+<li><a href="https://github.com/jazzband/django-simple-history"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">django-simple-history</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 存储模型历史记录并查看/恢复管理员的更改。</font></font></li>
+<li><a href="https://github.com/django-polymorphic/django-polymorphic"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">django-polymorphic</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - Django 多态简化了在 Django 项目中使用继承模型.</font></font></li>
+<li><a href="https://github.com/django-recurrence/django-recurrence"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">django-recurrence</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 在 Django 中处理重复日期的实用程序。</font></font></li>
+<li><a href="https://github.com/fabiocaccamo/django-treenode"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">django-treenode</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 基于树的东西的抽象模型/管理。</font></font></li>
+</ul>
+<h3 tabindex="-1" dir="auto"><a id="user-content-performance" class="anchor" aria-hidden="true" tabindex="-1" href="#performance"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">表现</font></font></h3>
+<ul dir="auto">
+<li><a href="https://cur.at/GHUO6cn?m=web" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">django-perf-rec</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 保存 Django 代码性能的详细记录。</font></font></li>
+<li><a href="https://newrelic.com/python/django" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">New Relic</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 时间中间件、视图和 SQL 查询。</font></font></li>
+<li><a href="https://docs.scoutapm.com/#django" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Scout</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 时间中间件、模板渲染和具有自动 N+1 检测的 SQL 查询。</font></font></li>
+<li><a href="https://github.com/django-query-profiler/django-query-profiler"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">django-query-profiler</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - Django 查询分析器帮助解决 N+1 查询。</font></font></li>
+<li><a href="https://github.com/jazzband/django-silk"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">django-silk</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - HTTP 请求和数据库查询的实时分析和检查。</font></font></li>
+<li><a href="https://github.com/benfred/py-spy"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">py-spy</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - Python 程序的采样分析器。</font></font></li>
+<li><a href="https://github.com/joerick/pyinstrument"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">pyinstrument</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 适用于 Python、Django、Flask、FastAPI 的调用堆栈分析器。</font></font></li>
+</ul>
+<h3 tabindex="-1" dir="auto"><a id="user-content-search" class="anchor" aria-hidden="true" tabindex="-1" href="#search"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">搜索</font></font></h3>
+<ul dir="auto">
+<li><a href="https://github.com/django-haystack/django-haystack"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">django-haystack</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - Django 的模块化搜索。</font></font></li>
+<li><a href="https://github.com/etianen/django-watson"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">django-watson</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 全文搜索插件。</font></font></li>
+<li><a href="https://github.com/shinneider/django-admin-search"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">django-admin-search</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - django admin 的模态过滤器。</font></font></li>
+<li><a href="https://github.com/django-es/django-elasticsearch-dsl"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">django-elasticsearch-dsl</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - Django 的 Elasticsearch DSL 集成。</font></font></li>
+</ul>
+<h3 tabindex="-1" dir="auto"><a id="user-content-search-engine-optimisation" class="anchor" aria-hidden="true" tabindex="-1" href="#search-engine-optimisation"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">搜索引擎优化</font></font></h3>
+<ul dir="auto">
+<li><a href="https://github.com/kapt-labs/django-check-seo"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">django-check-seo</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 检查页面的 SEO。</font></font></li>
+</ul>
+<h3 tabindex="-1" dir="auto"><a id="user-content-security" class="anchor" aria-hidden="true" tabindex="-1" href="#security"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">安全</font></font></h3>
+<ul dir="auto">
+<li><a href="https://github.com/mozilla/django-csp"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">django-csp</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 将</font></font><a href="http://www.w3.org/TR/CSP/" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Content-Security-Policy</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">标头添加到 Django。</font></font></li>
+<li><a href="https://github.com/adamchainz/django-feature-policy"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">django-feature-policy</font></font></a><font style="vertical-align: inherit;"></font><code>Feature-Policy</code><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> -在 Django 应用程序上</font><font style="vertical-align: inherit;">设置草稿安全 HTTP 标头。</font></font></li>
+<li><a href="https://github.com/cobusc/django-protected-media"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">django-protected-media</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 以受保护的方式管理被视为敏感的媒体。</font></font></li>
+<li><a href="https://djcheckup.com" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">DJ 检查</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">- 在部署的 Django 站点上运行多项检查以检查常见的安全错误。</font></font></li>
+</ul>
+<h3 tabindex="-1" dir="auto"><a id="user-content-static-assets" class="anchor" aria-hidden="true" tabindex="-1" href="#static-assets"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">静态资源</font></font></h3>
+<ul dir="auto">
+<li><a href="https://github.com/jschneier/django-storages"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">django-storages</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 支持 Django 多个自定义存储后端的单个库。</font></font></li>
+<li><a href="https://github.com/django-compressor/django-compressor/"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">django-compressor</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 将 JavaScript/CSS 压缩到单个缓存文件中。</font></font></li>
+<li><a href="https://github.com/SmileyChris/easy-thumbnails"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">easy-thumbnails</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - Django 的图像缩略图.</font></font></li>
+<li><a href="https://github.com/evansd/whitenoise"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Whitenoise</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 为 Python 网站提供简化的静态文件服务。</font></font></li>
+</ul>
+<h3 tabindex="-1" dir="auto"><a id="user-content-task-queues" class="anchor" aria-hidden="true" tabindex="-1" href="#task-queues"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">任务队列</font></font></h3>
+<ul dir="auto">
+<li><a href="https://github.com/rajasimon/beatserver"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">beatserver</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - Django 的定期任务调度程序。</font></font></li>
+<li><a href="https://github.com/Koed00/django-q"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">django-q</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 多处理分布式任务队列。</font></font></li>
+<li><a href="https://github.com/rq/django-rq"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">django-rq</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - Redis 队列的集成。</font></font></li>
+<li><a href="https://github.com/niwinz/django-redis"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">django-redis</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - Django 的全功能 Redis 缓存后端。</font></font></li>
+<li><a href="https://github.com/celery/celery"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">celery</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 强大且与代理无关的任务队列，适用于更大的、注重性能的项目。</font></font></li>
+<li><a href="https://github.com/mher/flower"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Flower</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - Flower 是一个基于 Web 的工具，用于监视和管理 Celery 集群。</font></font></li>
+<li><a href="https://github.com/celery/django-celery-beat"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">django-celery-beat</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 一个定期任务调度程序，其数据库由 Django 的管理面板配置。</font></font></li>
+<li><a href="https://github.com/danihodovic/celery-exporter"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">celery-exporter</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - Prometheus 和 Grafana 监控 Celery 任务。</font></font></li>
+<li><a href="https://github.com/Bogdanp/django_dramatiq"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">django-dramatiq</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 任务处理库，重点关注简单性、可靠性和性能。</font></font></li>
+</ul>
+<h3 tabindex="-1" dir="auto"><a id="user-content-templates" class="anchor" aria-hidden="true" tabindex="-1" href="#templates"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">模板</font></font></h3>
+<ul dir="auto">
+<li><a href="https://www.curlylint.org/" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">curylint</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 用于 Jinja、Nunjucks、Django 模板、Twig、Liquid 的实验性 HTML 模板 linting。</font></font></li>
+<li><a href="https://github.com/EmilStenstrom/django-components/"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">django-components</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 一种在 Django 中创建简单的可重用模板组件的方法。</font></font></li>
+<li><a href="https://github.com/carltongibson/django-template-partials/"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">django-template-partials</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - Django 模板语言的可重用命名内联部分。</font></font></li>
+<li><a href="https://github.com/rtts/djhtml"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">djhtml</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - Django/Jinja 模板压头。</font></font></li>
+<li><a href="https://www.djlint.com/" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">djlint</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - Lint 和格式化 HTML 模板。</font></font></li>
+<li><a href="https://mitchel.me/slippers/" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">slippers</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 在 Django 中构建可重用组件，无需编写一行 Python 代码。</font></font></li>
+<li><a href="https://jinjax.scaletti.dev/" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">JinjaX</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 为您的 Jinja 模板提供超级组件功能。</font></font></li>
+</ul>
+<h3 tabindex="-1" dir="auto"><a id="user-content-testing" class="anchor" aria-hidden="true" tabindex="-1" href="#testing"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">测试</font></font></h3>
+<ul dir="auto">
+<li><a href="https://github.com/jazzband/django-debug-toolbar/"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">django-debug-toolbar</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 用于调试请求/响应的可配置面板。</font></font></li>
+<li><a href="https://github.com/pytest-dev/pytest-django"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">pytest-django</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 在 Django 中使用 pytest 功能。</font></font></li>
+<li><a href="https://github.com/wemake-services/django-test-migrations"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">django-test-migrations</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 测试 django 架构和数据迁移，包括迁移的顺序。</font></font></li>
+<li><a href="https://github.com/revsys/django-test-plus/"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">django-test-plus</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - Django 默认测试用例的有用补充。</font></font></li>
+<li><a href="https://github.com/FactoryBoy/factory_boy"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Factory-boy</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 测试夹具更换。</font></font></li>
+<li><a href="https://github.com/django-waffle/django-waffle"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">django-waffle</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - Django 的功能翻转器。</font></font></li>
+<li><a href="https://github.com/model-bakers/model_bakery"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">model-bakery</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - Django 的对象工厂（旧模型妈妈项目的重命名）。</font></font></li>
+<li><a href="https://github.com/fcurella/django-fakery"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">django-fakery</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - Django 创建方法的易于使用的实现，由 Faker 支持。</font></font></li>
+<li><a href="https://github.com/snok/drf-openapi-tester"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">drf-openapi-tester</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 用于验证 Swagger 2.0 和 OpenAPI 3.0 文档的 Django 测试实用程序.</font></font></li>
+<li><a href="https://github.com/adinhodovic/django-google-optimize"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">django-google-optimize</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - Django 应用程序旨在使运行服务器端 Google Optimize A/B 测试变得容易。</font></font></li>
+<li><a href="https://github.com/torchbox/django-pattern-library"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">django-pattern-library</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - Django 模板的模式库生成器，以帮助测试 UI 组件。</font></font></li>
+<li><a href="https://github.com/torchbox/storybook-django"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Storybook-django</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 使用 Storybook 独立开发 Django UI 组件.</font></font></li>
+</ul>
+<h3 tabindex="-1" dir="auto"><a id="user-content-urls" class="anchor" aria-hidden="true" tabindex="-1" href="#urls"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">网址</font></font></h3>
+<ul dir="auto">
+<li><a href="https://github.com/jacobian/dj-database-url"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">dj-database-url</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 数据库 URL。</font></font></li>
+<li><a href="https://github.com/andrewgodwin/urlman"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">urlman</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 为 Django 模型创建 URL 的更好方法。</font></font></li>
+<li><a href="https://github.com/jazzband/django-robots"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">django-robots</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 这是一个基本的 Django 应用程序，用于按照机器人排除协议管理 robots.txt 文件，补充 Django Sitemap contrib 应用程序。</font></font></li>
+<li><a href="https://github.com/fabiocaccamo/django-redirects"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">django-redirects</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 按应有的方式重定向，并具有完全控制权。</font></font></li>
+</ul>
+<h3 tabindex="-1" dir="auto"><a id="user-content-users" class="anchor" aria-hidden="true" tabindex="-1" href="#users"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">用户</font></font></h3>
+<ul dir="auto">
+<li><a href="https://github.com/pennersr/django-allauth/"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">django-allauth</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 改进了用户注册，包括社交身份验证。</font></font></li>
+<li><a href="https://github.com/danihodovic/django-allauth-ui/"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">django-allauth-ui</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 更好看的 django-allauth 模板.</font></font></li>
+<li><a href="https://github.com/jambonsw/django-improved-user"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">django-improved-user</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 通过电子邮件进行身份验证的自定义 Django 用户。</font><font style="vertical-align: inherit;">遵循身份和身份验证最佳实践。</font></font></li>
+<li><a href="https://github.com/bennylope/django-organizations/"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">django-organizations</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - Django 项目的多用户帐户。</font></font></li>
+<li><a href="https://github.com/django-cas-ng/django-cas-ng"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">django-cas-ng</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - Django-cas-ng 是 Django CAS（中央身份验证服务）1.0/2.0/3.0 客户端库，支持 SSO（单点登录）和单点注销（SLO）。</font></font></li>
+</ul>
+<h3 tabindex="-1" dir="auto"><a id="user-content-views" class="anchor" aria-hidden="true" tabindex="-1" href="#views"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">意见</font></font></h3>
+<ul dir="auto">
+<li><a href="https://github.com/brack3t/django-braces"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">django-braces</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 可重用的通用 mixin。</font></font></li>
+<li><a href="https://github.com/soynatan/django-easy-audit"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">django-easy-audit</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 跟踪用户操作。</font></font></li>
+<li><a href="https://github.com/AndrewIngram/django-extra-views"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">django-extra-views</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 额外的基于类的通用视图。</font></font></li>
+<li><a href="https://github.com/tomchristie/django-vanilla-views"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">django-vanilla-views</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - Django 中更简单的基于类的视图。</font></font></li>
+<li><a href="https://github.com/mgrouchy/django-stronghold"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">django-stronghold</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 使所有 Django 视图默认为需要登录。</font></font></li>
+</ul>
+<h2 tabindex="-1" dir="auto"><a id="user-content-python-packages" class="anchor" aria-hidden="true" tabindex="-1" href="#python-packages"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Python 包</font></font></h2>
+<p dir="auto"><em><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">与 Django 配合良好的 Python 包的简短列表。</font></font></em></p>
+<ul dir="auto">
+<li><a href="https://github.com/mozilla/bleach"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">漂白剂</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">- 消毒您的输入/表格。</font></font></li>
+<li><a href="https://github.com/psf/black"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">black</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 毫不妥协的 Python 代码格式化程序。</font></font></li>
+<li><a href="https://github.com/nedbat/coveragepy"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">coveragepy</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 代码覆盖率测量。</font></font></li>
+<li><a href="https://github.com/joke2k/faker"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">faker</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> -Faker 是一个为您生成假数据的 Python 包。</font></font></li>
+<li><a href="https://github.com/coleifer/huey"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">huey</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - Python 的一个小任务队列。</font></font></li>
+<li><a href="https://github.com/jmcarp/nplusone"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">nplusone</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 自动检测 n+1 查询。</font></font></li>
+<li><a href="https://github.com/python-pillow/Pillow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Pillow</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - Python 图像库。</font></font></li>
+<li><a href="https://github.com/pytest-dev/pytest/"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">pytest</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 测试框架。</font></font></li>
+<li><a href="https://github.com/henriquebastos/python-decouple"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">python-de Couple</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 设置与代码严格分离。</font></font></li>
+<li><a href="https://github.com/un33k/python-slugify"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">python-slugify</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 返回 unicode slugs。</font></font></li>
+<li><a href="https://github.com/getsentry/sentry-python"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Sentry-python</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 错误报告 SDK。</font></font></li>
+<li><a href="https://github.com/miguelgrinberg/python-socketio"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">python-socketio</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - Socket.IO_ 实时客户端和服务器的 Python 实现。</font></font><a href="https://python-socketio.readthedocs.io/en/latest/server.html?highlight=django#creating-a-server-instance" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">（创建 Socket.io Django 服务器实例）</font></font></a></li>
+</ul>
+<h2 tabindex="-1" dir="auto"><a id="user-content-resources" class="anchor" aria-hidden="true" tabindex="-1" href="#resources"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">资源</font></font></h2>
+<h3 tabindex="-1" dir="auto"><a id="user-content-official-resources" class="anchor" aria-hidden="true" tabindex="-1" href="#official-resources"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">官方资源</font></font></h3>
+ 
+<ul dir="auto">
+<li><a href="https://www.djangoproject.com/" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">项目网站</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">- Django 官方网站。</font></font></li>
+<li><a href="https://docs.djangoproject.com/en/dev/" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">文档</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">- 所有 Django 版本的综合文档。</font></font></li>
+<li><a href="https://docs.djangoproject.com/en/dev/intro/tutorial01/" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">民意调查教程</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">- 在学习 Django 内部结构的同时构建民意调查教程。</font></font></li>
+<li><a href="https://github.com/django/django/"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">源代码</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">- 托管在 GitHub 上。</font></font></li>
+</ul>
+<h3 tabindex="-1" dir="auto"><a id="user-content-educational" class="anchor" aria-hidden="true" tabindex="-1" href="#educational"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">教育性</font></font></h3>
+<ul dir="auto">
+<li><a href="https://tutorial.djangogirls.org/en/" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Django Girls 教程</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">- 使用基于函数的视图构建博客应用程序。</font></font></li>
+<li><a href="https://learndjango.com/" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">LearnDjango</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 有关 Django 和 Django REST Framework 的教程和高级课程。</font></font></li>
+<li><a href="https://adamj.eu/tech/" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Adam Johnson</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - Adam 是 Django 技术委员会的成员，并定期编写教程。</font></font></li>
+<li><a href="https://testdriven.io/blog/" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">TestDriven</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 多个 Django 特定教程，涉及 Docker、支付等主题。</font></font></li>
+<li><a href="https://ccbv.co.uk/" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">优雅的基于类的视图</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">- 每个通用的基于类的视图的方法/属性/属性的详细描述。</font></font></li>
+<li><a href="https://github.com/ana-balica/classy-django-forms"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Classy Django Forms</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 每个表单类的方法/属性/属性的详细描述。</font></font></li>
+<li><a href="http://www.cdrf.co" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Classy Django REST Framework</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 基于 DRF 类的视图和序列化器的方法/属性的详细描述。</font></font></li>
+<li><a href="https://simpleisbetterthancomplex.com/" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">简单胜于复杂</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">- 定期更新的网站，包含许多有关 Django 的教程和技巧。</font></font></li>
+<li><a href="https://www.fullstackpython.com/django.html" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Full Stack Python's Django Page</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - Django 哲学的解释以及其他资源和教程的链接。</font></font></li>
+<li><a href="https://realpython.com/tutorials/django/" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">RealPython</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 许多关于 Django 的高质量教程。</font></font></li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Mozilla 教程</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">- 创建借阅图书馆应用程序。</font></font></li>
+<li><a href="https://www.mattlayman.com" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Matt Layman</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 关于 Django 主题的常规教程和深入研究。</font></font></li>
+<li><a href="https://www.djangosites.org/" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Django 站点</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">- 使用 Django 构建的站点的综合列表。</font></font></li>
+<li><a href="https://github.com/HackSoftware/Django-Styleguide"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Django Styleguide</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - Django 样式指南，包含最佳实践和示例。</font></font></li>
+<li><a href="https://www.djangotemplatetagsandfilters.com/" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Django 模板标签和过滤器</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">- 有关 Django 57 个内置模板过滤器和 27 个模板标签的附加文档。</font></font></li>
+<li><a href="https://www.dj4e.com/" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Django forEverybody</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 针对 Webdev 初学者的完整课程，重点关注 Django。</font></font></li>
+<li><a href="https://cs50.harvard.edu/web/2020/" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">CS50W</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 哈佛大学的 Web 开发入门课程，它解释了 Django 作为后端框架。</font></font></li>
+</ul>
+<h3 tabindex="-1" dir="auto"><a id="user-content-community" class="anchor" aria-hidden="true" tabindex="-1" href="#community"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">社区</font></font></h3>
+
+<ul dir="auto">
+<li><a href="https://forum.djangoproject.com/" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Django 论坛</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">- 官方论坛。</font></font></li>
+<li><a href="https://www.djangoproject.com/community/" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">社区页面</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">- 包含社区博客文章、职位等的提要。</font></font></li>
+<li><a href="https://groups.google.com/forum/#!forum/django-users/" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Django Users Google Group</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 非常活跃的问题/答案讨论板。</font></font></li>
+<li><a href="https://groups.google.com/forum/#!forum/django-developers/" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Developers Google Group</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 仅用于对 Django 本身的贡献。</font></font></li>
+<li><a href="https://fosstodon.org/@django" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Mastodon</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 有关更新、安全修复等的官方公告。</font></font></li>
+<li><a href="https://twitter.com/djangoproject/" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Twitter</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 有关更新、安全修复等的官方公告。</font></font></li>
+<li><a href="https://discord.com/invite/xcRH6mN4fa" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Discord 服务器</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">- Django Discord 社区。</font></font></li>
+<li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">IRC 频道 - 在 irc://irc.freenode.net/django 上与其他 Django 用户聊天。</font></font></li>
+</ul>
+
+<h3 tabindex="-1" dir="auto"><a id="user-content-conferences" class="anchor" aria-hidden="true" tabindex="-1" href="#conferences"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">会议</font></font></h3>
+<ul dir="auto">
+<li><a href="https://djangocon.us/" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">DjangoCon 美国</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">（</font></font><a href="https://www.youtube.com/channel/UC0yY6a79pPY9J0ShIHRf6yw" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">YouTube 频道</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">）</font></font></li>
+<li><a href="https://djangocon.eu/" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">DjangoCon 欧洲</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">（</font></font><a href="https://www.youtube.com/user/djangoconeurope" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">YouTube 频道</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">）</font></font></li>
+<li><a href="https://djangocon.com.au/" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">DjangoCon AU</font></font></a></li>
+<li><a href="https://djangocon.africa/" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">DjangoCon 非洲</font></font></a></li>
+<li><a href="https://github.com/wsvincent/awesome-django#conferences"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">姜戈日 哥本哈根</font></font></a></li>
+<li><a href="https://us.pycon.org/2020/" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">PyCon 美国</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">（</font></font><a href="https://www.youtube.com/channel/UCsX05-2sVSH7Nx3zuk3NYuQ" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">YouTube 频道</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">）</font></font></li>
+<li><a href="https://2019.pycon-au.org/" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">PyCon 澳大利亚</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">（</font></font><a href="https://www.youtube.com/user/PyConAU" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">YouTube 频道</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">）</font></font></li>
+<li><a href="https://ep2019.europython.eu/" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">欧洲蟒蛇</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">（</font></font><a href="https://www.youtube.com/user/PythonItalia" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">YouTube 频道</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">）</font></font></li>
+<li><a href="https://www.youtube.com/channel/UC9T1dhIlL_8Va9DxvKRowBw/videos" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">引擎盖下的姜戈</font></font></a></li>
+<li><a href="https://pycon.org" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">全球所有 PyCon 的完整列表</font></font></a></li>
+</ul>
+<h3 tabindex="-1" dir="auto"><a id="user-content-job-boards" class="anchor" aria-hidden="true" tabindex="-1" href="#job-boards"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">工作委员会</font></font></h3>
+<ul dir="auto">
+<li><a href="https://jobs.django-news.com/" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Django News Jobs</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 一个 Django 求职板，还聚合了其他求职板。</font></font></li>
+<li><a href="https://djangogigs.com" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Django Gigs</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 该平台专门面向自由职业者和全职 Django 开发人员。</font></font></li>
+<li><a href="https://djangojobs.net" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Django Jobs</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 招聘 Django Python 开发人员的 Django 职位发布.</font></font></li>
+<li><a href="https://www.python.org/jobs/" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Python.org 工作委员会</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">- 虽然该工作委员会并非专门针对 Django，但它由官方 Python 网站托管，并提供一系列与 Python 和 Django 相关的工作机会。</font></font></li>
+</ul>
+<h3 tabindex="-1" dir="auto"><a id="user-content-newsletters" class="anchor" aria-hidden="true" tabindex="-1" href="#newsletters"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">时事通讯</font></font></h3>
+<ul dir="auto">
+<li><a href="https://django-news.com" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Django News</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 有关公告、文章、项目和演讲的每周时事通讯。</font></font></li>
+</ul>
+<h3 tabindex="-1" dir="auto"><a id="user-content-podcasts" class="anchor" aria-hidden="true" tabindex="-1" href="#podcasts"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">播客</font></font></h3>
+<ul dir="auto">
+<li><a href="https://djangochat.com/" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Django Chat</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - William Vincent 和 Django Fellow Carlton Gibson 的每周播客，讨论 Django 核心概念和常客。</font></font></li>
+<li><a href="https://djangoriffs.com" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Django Riffs</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - Matt Layman 的新播客。</font></font></li>
+<li><a href="https://runninginproduction.com/tags/django" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Running in Production</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 专注于技术堆栈，其中有许多专门针对 Django 的章节。</font></font></li>
+<li><a href="https://talkpython.fm/" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">TalkPython</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 领先的 Python 播客，有几集关于 Django 的内容。</font></font></li>
+<li><a href="https://www.pythonpodcast.com/" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Podcast Init</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 一个流行的 Python 播客，有时会有 Django 嘉宾。</font></font></li>
+</ul>
+<h3 tabindex="-1" dir="auto"><a id="user-content-books" class="anchor" aria-hidden="true" tabindex="-1" href="#books"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">图书</font></font></h3>
+<p dir="auto"><em><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">姜戈 4.2</font></font></em></p>
+<ul dir="auto">
+<li><a href="https://djangoforbeginners.com/" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Django 初学者：使用 Python 和 Django 构建网站</font></font></a></li>
+</ul>
+<p dir="auto"><em><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">姜戈4.0</font></font></em></p>
+<ul dir="auto">
+<li><a href="https://adamchainz.gumroad.com/l/byddx" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">增强您的 Django DX</font></font></a></li>
+<li><a href="https://djangoforapis.com/" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Django for API：使用 Python 和 Django 构建 Web API</font></font></a></li>
+<li><a href="https://djangoforprofessionals.com/" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Django for Professionals：使用 Python 和 Django 制作网站</font></font></a></li>
+<li><a href="https://www.amazon.com/dp/1801813051/" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Django 4 示例：从头开始构建强大且可靠的 Python Web 应用程序</font></font></a></li>
+</ul>
+<p dir="auto"><em><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">姜戈3.2</font></font></em></p>
+<ul dir="auto">
+<li><a href="https://adamj.eu/tech/2020/05/04/new-book-speed-up-your-django-tests/" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">加快 Django 测试速度</font></font></a></li>
+<li><a href="https://www.feldroy.com/books/two-scoops-of-django-3-x" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Django 3.x 的两篇文章：Django Web 框架的最佳实践</font></font></a></li>
+<li><a href="https://www.feldroy.com/books/a-wedge-of-django" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">A Wedge of Django：涵盖 Python 3.8 和 Django 3.x</font></font></a></li>
+</ul>
+<h2 tabindex="-1" dir="auto"><a id="user-content-hosting" class="anchor" aria-hidden="true" tabindex="-1" href="#hosting"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">托管</font></font></h2>
+<h3 tabindex="-1" dir="auto"><a id="user-content-paas-platforms-as-a-service" class="anchor" aria-hidden="true" tabindex="-1" href="#paas-platforms-as-a-service"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">PaaS（平台即服务）</font></font></h3>
+<ul dir="auto">
+<li><a href="https://appliku.com" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">应用程序</font></font></a></li>
+<li><a href="https://dokku.com" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">多库</font></font></a></li>
+<li><a href="https://www.divio.com" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">迪维奥</font></font></a></li>
+<li><a href="https://fly.io" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">飞</font></font></a></li>
+<li><a href="https://cloud.google.com/python/django/" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">谷歌云</font></font></a></li>
+<li><a href="https://www.heroku.com" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">赫罗库</font></font></a></li>
+<li><a href="https://azure.microsoft.com/en-us/develop/python/" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">微软Azure</font></font></a></li>
+<li><a href="https://platform.sh" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">平台.sh</font></font></a></li>
+<li><a href="https://www.pythonanywhere.com" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Python无处不在</font></font></a></li>
+<li><a href="https://railway.app" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">铁路</font></font></a></li>
+<li><a href="https://render.com" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">使成为</font></font></a></li>
+<li><a href="https://vercel.com/home" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">韦尔塞尔</font></font></a></li>
+</ul>
+<h3 tabindex="-1" dir="auto"><a id="user-content-iaas-infrastructure-as-a-service" class="anchor" aria-hidden="true" tabindex="-1" href="#iaas-infrastructure-as-a-service"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">IaaS（基础设施即服务）</font></font></h3>
+<ul dir="auto">
+<li><a href="https://www.digitalocean.com" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">数字海洋</font></font></a></li>
+<li><a href="https://www.linode.com" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">易诺德</font></font></a></li>
+<li><a href="https://aws.amazon.com/lightsail/" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">亚马逊光帆</font></font></a></li>
+<li><a href="https://www.hetzner.com" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">赫茨纳</font></font></a></li>
+</ul>
+<h2 tabindex="-1" dir="auto"><a id="user-content-projects" class="anchor" aria-hidden="true" tabindex="-1" href="#projects"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">项目</font></font></h2>
+<h3 tabindex="-1" dir="auto"><a id="user-content-boilerplate" class="anchor" aria-hidden="true" tabindex="-1" href="#boilerplate"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">样板文件</font></font></h3>
+<ul dir="auto">
+<li><a href="https://github.com/pydanny/cookiecutter-django/"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">cookiecutter-django</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 一个完整的入门项目，高度可定制。</font></font></li>
+<li><a href="https://github.com/epicserve/django-base-site/"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">django-base-site</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 预安装了许多常见第三方软件包的 Django 站点。</font></font></li>
+<li><a href="https://github.com/wsvincent/djangox/"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">djangox</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 电池包括 Pip、Pipenv 或 Docker 的启动项目。</font></font></li>
+<li><a href="https://github.com/wsvincent/drfx/"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">DRFx</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 具有用户身份验证、Pipenv 和其他功能的 DRF 启动器。</font></font></li>
+<li><a href="https://github.com/jpadilla/django-project-template"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">django-project-template</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 一个故意的基本项目，具有多个临时环境和 Heroku 部署配置。</font></font></li>
+<li><a href="https://github.com/erroneousboat/docker-django/"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">docker-django</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - Django 和 Docker 的快速入门指南。</font></font></li>
+<li><a href="https://github.com/amerkurev/django-docker-template"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">django-docker-template</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 使用 Postgres、Gunicorn 和 Traefik 的 Dockerized Django（具有自动更新 Let's Encrypt）.</font></font></li>
+<li><a href="https://github.com/jefftriplett/django-startproject"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">django-startproject</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - Django 使用电池启动项目模板。</font></font></li>
+<li><a href="https://github.com/wemake-services/wemake-django-template/"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">wemake-django-template</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 专注于代码质量和安全性的前沿 Django 模板。</font></font></li>
+<li><a href="https://github.com/khadegd/django-webpack-starter"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">django-webpack-starter</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 使用 Webpack 4 的 Django Webpack 入门模板.</font></font></li>
+<li><a href="https://github.com/erayerdin/sos-django-template"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">sos-django-template</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 具有单独的开发和生产设置的 Django 入门模板。</font></font></li>
+<li><a href="https://github.com/bfirsh/django-docker-heroku-template"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">django-docker-heroku-template</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 为 dev/test/prod 设置的包含 Docker、GitHub Actions 和 Heroku 的模板，以及各种其他最佳实践。</font></font></li>
+<li><a href="https://github.com/ilikerobots/cookiecutter-vue-django"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">cookiecutter-vue-django</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 融合 Vue SFC 和 Django 模板的 Django + Vue 入门项目。</font></font></li>
+<li><a href="https://github.com/jayfk/launchr"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">launchr</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - Launchr 是用于 SaaS Web 应用程序的专用 Django 入门模板。</font></font></li>
+<li><a href="https://github.com/stribny/sidewinder/"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">sidewinder</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - Django 入门工具包，专注于良好的默认设置、开发人员体验和部署。</font></font></li>
+</ul>
+<h3 tabindex="-1" dir="auto"><a id="user-content-open-source-projects" class="anchor" aria-hidden="true" tabindex="-1" href="#open-source-projects"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">开源项目</font></font></h3>
+<ul dir="auto">
+<li><a href="https://github.com/wsvincent/djangoforbeginners/tree/master/ch7-blog-app-with-users/"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">包含用户和表单的博客应用程序</font></font></a></li>
+<li><a href="https://github.com/wsvincent/djangoforbeginners/tree/master/ch15-comments"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">具有自定义用户模型、完整用户身份验证的报纸应用程序</font></font></a></li>
+<li><a href="https://github.com/sebst/pythonic-news"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">pythonic-news</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 黑客新闻克隆。</font></font></li>
+<li><a href="https://github.com/testdrivenio/django-aloe-bdd/"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">芦荟行为驱动开发</font></font></a></li>
+<li><a href="https://github.com/MeNsaaH/soMedia"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">图片分享博客</font></font></a></li>
+<li><a href="https://github.com/vitorfs/bootcamp"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Bootcamp：企业社交网络</font></font></a></li>
+<li><a href="https://github.com/zulip/zulip/"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Zulip</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 开源团队聊天。</font></font></li>
+<li><a href="https://github.com/MicroPyramid/Django-CRM/"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Django-CRM</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 基于 Django 的开源 Python CRM。</font></font></li>
+<li><a href="https://github.com/manjurulhoque/django-job-portal"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">django-job-portal</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 使用 Django 的工作门户应用程序。</font></font></li>
+<li><a href="https://builtwithdjango.com" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">使用 Django 构建</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">- 精彩 Django 项目的精选列表。</font></font></li>
+<li><a href="https://github.com/PostHog/posthog"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">PostHog</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 开源产品分析。</font></font></li>
+<li><a href="https://gitlab.com/mailman/hyperkitty" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">HyperKitty</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 用于访问 GNU Mailman v3 档案的 Web 界面。</font></font></li>
+<li><a href="https://github.com/healthchecks/healthchecks"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Healthchecks</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 用 Python 和 Django 编写的 Cron 监控工具。</font></font></li>
+<li><a href="https://github.com/Flagsmith/flagsmith"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Flagsmith</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 开源功能标记、远程配置和 AB 测试。</font></font></li>
+</ul>
+<h2 tabindex="-1" dir="auto"><a id="user-content-django-rest-framework" class="anchor" aria-hidden="true" tabindex="-1" href="#django-rest-framework"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Django REST 框架</font></font></h2>
+<p dir="auto"><em><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">使用 Django 构建 Web API 的最流行方法。</font></font></em></p>
+<h3 tabindex="-1" dir="auto"><a id="user-content-drf-resources" class="anchor" aria-hidden="true" tabindex="-1" href="#drf-resources"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">DRF资源</font></font></h3>
+
+<ul dir="auto">
+<li><a href="https://www.django-rest-framework.org/" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">官方文档</font></font></a></li>
+<li><a href="https://github.com/encode/django-rest-framework"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">DRF源代码</font></font></a></li>
+<li><a href="https://github.com/nioperas06/awesome-django-rest-framework"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">很棒的 django-rest-framework</font></font></a></li>
+</ul>
+
+<h3 tabindex="-1" dir="auto"><a id="user-content-drf-tutorials" class="anchor" aria-hidden="true" tabindex="-1" href="#drf-tutorials"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">DRF 教程</font></font></h3>
+
+<ul dir="auto">
+<li><a href="https://learndjango.com/tutorials/official-django-rest-framework-tutorial-beginners" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">官方 REST 框架 - 初学者指南</font></font></a></li>
+<li><a href="https://books.agiliq.com/projects/django-api-polls-tutorial/en/latest/" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">使用 Django 和 DRF 构建 API</font></font></a></li>
+<li><a href="https://www.valentinog.com/blog/drf/" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">DRF 与 React</font></font></a></li>
+<li><a href="https://fractalideas.com/blog/making-react-and-django-play-well-together/" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">让 React 和 Django 能够很好地协同工作</font></font></a></li>
+</ul>
+<h2 tabindex="-1" dir="auto"><a id="user-content-wagtail" class="anchor" aria-hidden="true" tabindex="-1" href="#wagtail"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">鹡鸰</font></font></h2>
+<p dir="auto"><em><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Wagtail，适用于现代网站的强大 CMS。</font></font></em></p>
+<h3 tabindex="-1" dir="auto"><a id="user-content-wagtail-resources" class="anchor" aria-hidden="true" tabindex="-1" href="#wagtail-resources"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">鹡鸰资源</font></font></h3>
+
+<ul dir="auto">
+<li><a href="https://wagtail.org/" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">官方网站</font></font></a></li>
+<li><a href="https://docs.wagtail.org/en/stable/" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">开发者文档</font></font></a></li>
+<li><a href="https://guide.wagtail.org/en-latest/" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">用户文档</font></font></a></li>
+<li><a href="https://github.com/wagtail/wagtail/"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">鹡鸰源代码</font></font></a></li>
+<li><a href="https://github.com/springload/awesome-wagtail"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">真棒鹡鸰</font></font></a></li>
+<li><a href="https://wagtail.org/this-week-in-wagtail/" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">本周 Wagtail</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> -（大多数）每周发送一封电子邮件，其中包含 Wagtail 核心团队的更新。</font></font></li>
+<li><a href="https://www.wagtail.space/" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Wagtail Space</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 全球各地的 Wagtail CMS 活动。</font></font></li>
+</ul>
+
+</article></div>
